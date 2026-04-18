@@ -1,160 +1,108 @@
-// NY Published Opinions scraper
-// Sources: nycourts.gov Law Reporting Bureau slip opinion index tables
-// Note: nycourts.gov blocks some automated requests — if 403, check Vercel logs and
-//       consider adding Referer/Cookie headers or switching to the RSS feeds below.
+// NY Published Opinions — CourtListener API
+// Free API key required: https://www.courtlistener.com/sign-in/ → Profile → API token
+// Add as Vercel env var: COURTLISTENER_API_KEY
 //
-// Per-court RSS feeds (fallback if HTTP scraping is blocked):
-//   Court of Appeals:  https://www.nycourts.gov/reporter/rss/COA.xml
-//   AD 1st Dept:       https://www.nycourts.gov/reporter/rss/AD1st.xml
-//   AD 2nd Dept:       https://www.nycourts.gov/reporter/rss/AD2nd.xml
-//   AD 3rd Dept:       https://www.nycourts.gov/reporter/rss/AD3rd.xml
-//   AD 4th Dept:       http://courts.state.ny.us/REPORTER/RSS/AD4th.xml
+// Court IDs:
+//   ny        → New York Court of Appeals
+//   nyappdiv  → NY Appellate Division (all departments combined)
 
-const SOURCES = [
-  { url: 'https://www.nycourts.gov/reporter/slipidx/cidxtable.shtml',   court: 'New York Court of Appeals' },
-  { url: 'https://www.nycourts.gov/reporter/slipidx/aidxtable_1.shtml', court: 'NY App. Div. — 1st Dept.' },
-  { url: 'https://www.nycourts.gov/reporter/slipidx/aidxtable_2.shtml', court: 'NY App. Div. — 2nd Dept.' },
-  { url: 'https://www.nycourts.gov/reporter/slipidx/aidxtable_3.shtml', court: 'NY App. Div. — 3rd Dept.' },
-  { url: 'https://www.nycourts.gov/reporter/slipidx/aidxtable_4.shtml', court: 'NY App. Div. — 4th Dept.' },
-];
+const CL_BASE = 'https://www.courtlistener.com/api/rest/v4';
 
-function htmlToText(html) {
-  return html
-    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-    .replace(/&nbsp;/g, ' ').replace(/&#039;/g, "'").replace(/&quot;/g, '"')
-    .replace(/\s+/g, ' ').trim();
-}
+const COURT_DISPLAY = {
+  ny:       'New York Court of Appeals',
+  nyappdiv: 'NY Appellate Division',
+};
 
-// Build both zero-padded and non-padded date strings for matching
-// e.g. "2026-04-07" → ["04/07/2026", "4/7/2026"]
-function isoToNYDateVariants(iso) {
-  const [yyyy, mm, dd] = iso.split('-');
-  return [
-    mm + '/' + dd + '/' + yyyy,
-    String(parseInt(mm, 10)) + '/' + String(parseInt(dd, 10)) + '/' + yyyy,
-  ];
-}
-
-// Extract all <a> tags with href from an HTML fragment
-function extractLinks(html) {
-  const links = [];
-  const re = /href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
-  let m;
-  while ((m = re.exec(html)) !== null) {
-    links.push({ href: m[1], text: htmlToText(m[2]).trim() });
-  }
-  return links;
-}
-
-function makeAbsolute(href) {
-  if (!href) return '';
-  if (href.startsWith('http')) return href;
-  return 'https://www.nycourts.gov' + (href.startsWith('/') ? href : '/' + href);
-}
-
-function parseNYTableHtml(html, targetIso, courtName) {
+// CourtListener cluster → opinion object
+// Cluster fields: id, case_name, date_filed, absolute_url, citations[], sub_opinions[]
+// Sub-opinion fields: resource_uri, type, download_url
+async function fetchClusters(courtId, targetIso, apiKey) {
   const results = [];
-  const dateVariants = isoToNYDateVariants(targetIso);
+  let url = `${CL_BASE}/clusters/?docket__court=${courtId}&date_filed=${targetIso}&page_size=100&format=json`;
 
-  const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
-  let rowM;
-
-  while ((rowM = rowRe.exec(html)) !== null) {
-    const rowHtml = rowM[1];
-    const rowText = htmlToText(rowHtml);
-
-    // Skip rows without our target date
-    if (!dateVariants.some(d => rowText.includes(d))) continue;
-
-    // Skip unpublished opinions (marked [U]) — they won't have PDFs
-    if (/\[U\]/i.test(rowText)) continue;
-
-    const links = extractLinks(rowHtml);
-
-    let caseName = '';
-    let viewUrl = '';
-    let pdfUrl = '';
-
-    for (const link of links) {
-      const t = link.text;
-      const h = link.href.toLowerCase();
-
-      // PDF link: href ends in .pdf
-      if (h.includes('.pdf') && !pdfUrl) {
-        pdfUrl = makeAbsolute(link.href);
-        continue;
-      }
-      // PDF link: link text is "PDF"
-      if (/^PDF$/i.test(t) && !pdfUrl) {
-        pdfUrl = makeAbsolute(link.href);
-        continue;
-      }
-      // Skip non-case-name links
-      if (!t) continue;
-      if (/^(HTML?|Full\s+Decision|Decision|View|PDF)$/i.test(t)) {
-        if (!viewUrl) viewUrl = makeAbsolute(link.href);
-        continue;
-      }
-      if (/^\d+$/.test(t)) continue;
-      if (/\d{4}\s+NY\s+Slip/i.test(t)) continue;
-
-      // First meaningful link text is the case name
-      if (!caseName) {
-        caseName = t;
-        viewUrl = makeAbsolute(link.href);
-      }
-    }
-
-    // Also grab PDF by href pattern if not already found
-    if (!pdfUrl) {
-      const m2 = rowHtml.match(/href="([^"]*\.pdf[^"]*)"/i);
-      if (m2) pdfUrl = makeAbsolute(m2[1]);
-    }
-
-    if (!caseName) continue;
-
-    // Use NY Slip Op citation as the docket identifier
-    const slipM = rowText.match(/\d{4}\s+NY\s+Slip\s+Op\s+\d+/i);
-    const docket = slipM ? slipM[0] : '';
-
-    results.push({
-      case_name: caseName,
-      docket,
-      court: courtName,
-      date: targetIso,
-      url: viewUrl || pdfUrl,
-      pdf_url: pdfUrl,
-      summary: '',
+  while (url) {
+    const res = await fetch(url, {
+      headers: {
+        'Authorization': `Token ${apiKey}`,
+        'Accept': 'application/json',
+      },
     });
+    if (!res.ok) {
+      const text = await res.text().catch(() => '');
+      throw new Error(`CourtListener ${res.status} for court=${courtId}: ${text.slice(0, 200)}`);
+    }
+
+    const data = await res.json();
+
+    for (const cluster of (data.results || [])) {
+      const caseName = (cluster.case_name || cluster.case_name_full || '').trim();
+      if (!caseName) continue;
+
+      // Build the CourtListener view URL
+      const viewUrl = cluster.absolute_url
+        ? 'https://www.courtlistener.com' + cluster.absolute_url
+        : '';
+
+      // Extract best citation as docket identifier
+      let docket = '';
+      if (cluster.citations && cluster.citations.length > 0) {
+        const c = cluster.citations[0];
+        docket = [c.volume, c.reporter, c.page].filter(Boolean).join(' ');
+      }
+      // Fall back to cluster ID
+      if (!docket) docket = 'CL-' + cluster.id;
+
+      // PDF: look for download_url in sub_opinions
+      // sub_opinions may be an array of URLs (strings) or objects
+      let pdfUrl = '';
+      const subs = cluster.sub_opinions || [];
+      for (const sub of subs) {
+        if (typeof sub === 'object' && sub.download_url) {
+          pdfUrl = sub.download_url;
+          break;
+        }
+      }
+      // If sub_opinions are URLs not objects, skip — we'll fetch PDF on summarize
+
+      // Detect AD department from case_name or cluster metadata if available
+      let court = COURT_DISPLAY[courtId] || courtId;
+      if (courtId === 'nyappdiv') {
+        // CourtListener sometimes includes dept info in the docket's court_short_name
+        // If available, use it; otherwise fall back to generic label
+        const shortName = cluster.docket_short_name || '';
+        if (/1st/i.test(shortName)) court = 'NY App. Div. — 1st Dept.';
+        else if (/2nd/i.test(shortName)) court = 'NY App. Div. — 2nd Dept.';
+        else if (/3rd/i.test(shortName)) court = 'NY App. Div. — 3rd Dept.';
+        else if (/4th/i.test(shortName)) court = 'NY App. Div. — 4th Dept.';
+      }
+
+      results.push({
+        case_name: caseName,
+        docket,
+        court,
+        date: targetIso,
+        url: viewUrl,
+        pdf_url: pdfUrl,
+        summary: '',
+      });
+    }
+
+    url = data.next || null;
   }
 
   return results;
 }
 
-async function fetchSource(url) {
-  const res = await fetch(url, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'Accept-Language': 'en-US,en;q=0.9',
-      'Referer': 'https://www.nycourts.gov/reporter/',
-    },
-  });
-  if (!res.ok) throw new Error('HTTP ' + res.status + ' from ' + url);
-  return res.text();
-}
-
 async function getNYPublishedOpinionsForDate(targetIso) {
+  const apiKey = process.env.COURTLISTENER_API_KEY;
+  if (!apiKey) throw new Error('COURTLISTENER_API_KEY env var not set. Get a free token at courtlistener.com');
+
   const all = [];
   const seen = new Set();
 
-  for (const source of SOURCES) {
+  for (const courtId of Object.keys(COURT_DISPLAY)) {
     try {
-      const html = await fetchSource(source.url);
-      const opinions = parseNYTableHtml(html, targetIso, source.court);
+      const opinions = await fetchClusters(courtId, targetIso, apiKey);
       for (const op of opinions) {
         const key = op.docket || op.case_name;
         if (seen.has(key)) continue;
@@ -162,8 +110,7 @@ async function getNYPublishedOpinionsForDate(targetIso) {
         all.push(op);
       }
     } catch (err) {
-      console.error('[NY scraper] ' + source.court + ':', err.message);
-      // Continue — partial results are better than none
+      console.error('[CourtListener] court=' + courtId + ':', err.message);
     }
   }
 
