@@ -1,3 +1,14 @@
+const COURT_TO_CL = {
+  "New York Court of Appeals":        "ny",
+  "NY App. Div. — 1st Dept.":         "nyappdiv",
+  "NY App. Div. — 2nd Dept.":         "nyappdiv",
+  "NY App. Div. — 3rd Dept.":         "nyappdiv",
+  "NY App. Div. — 4th Dept.":         "nyappdiv",
+  "NY App. Term — 1st Dept.":         "nyappterm",
+  "NY App. Term — 2nd Dept.":         "nyappterm",
+  "Second Circuit Court of Appeals":  "ca2",
+};
+
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
@@ -72,8 +83,50 @@ TAGS: [tag1, tag2]`;
     }
   }
 
+  async function fetchFromCourtListener(caseName, docketStr, courtName) {
+    const clApiKey = process.env.COURTLISTENER_API_KEY;
+    const courtId = COURT_TO_CL[courtName];
+    const headers = { "Accept": "application/json" };
+    if (clApiKey) headers["Authorization"] = `Token ${clApiKey}`;
+
+    // Extract year from docket like "2026 NY Slip Op 02363"
+    const yearMatch = docketStr && docketStr.match(/^(\d{4})\s/);
+
+    const params = new URLSearchParams({ case_name: caseName, page_size: "3", format: "json", order_by: "-date_filed" });
+    if (courtId) params.set("docket__court", courtId);
+    if (yearMatch) {
+      params.set("date_filed_min", `${yearMatch[1]}-01-01`);
+      params.set("date_filed_max", `${yearMatch[1]}-12-31`);
+    }
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 12000);
+    try {
+      const res = await fetch(`https://www.courtlistener.com/api/rest/v4/clusters/?${params}`, { signal: controller.signal, headers });
+      if (!res.ok) return null;
+      const data = await res.json();
+      const cluster = (data.results || [])[0];
+      if (!cluster) return null;
+
+      for (const sub of (cluster.sub_opinions || [])) {
+        const opUrl = typeof sub === "string" ? sub : sub.resource_uri;
+        if (!opUrl) continue;
+        const opRes = await fetch(opUrl, { signal: controller.signal, headers });
+        if (!opRes.ok) continue;
+        const op = await opRes.json();
+        const text = (op.plain_text || "").trim();
+        if (text.length > 200) return text.slice(0, 6000);
+      }
+      return null;
+    } catch {
+      return null;
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
   try {
-    const opinionText = await extractOpinionText(url);
+    const opinionText = (await extractOpinionText(url)) || (await fetchFromCourtListener(case_name, docket, court));
 
     const userMessage = opinionText
       ? `Here is the court opinion for ${case_name} (${docket}), ${court}:\n\n${opinionText}\n\n---\n\n${prompt}`
