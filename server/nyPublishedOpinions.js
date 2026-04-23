@@ -1,108 +1,151 @@
-// NY Published Opinions — CourtListener API
-// Free API key required: https://www.courtlistener.com/sign-in/ → Profile → API token
-// Add as Vercel env var: COURTLISTENER_API_KEY
+// NY Published Opinions — official nycourts.gov RSS feeds
+// No API key required; feeds are public and bypass Cloudflare scraping blocks.
 //
-// Court IDs:
-//   ny        → New York Court of Appeals
-//   nyappdiv  → NY Appellate Division (all departments combined)
+// Feed URLs (verified):
+//   Court of Appeals: https://www.nycourts.gov/reporter/rss/COA.xml
+//   AD 1st Dept:      https://www.nycourts.gov/reporter/rss/AD1st.xml
+//   AD 2nd Dept:      https://www.nycourts.gov/reporter/rss/AD2nd.xml
+//   AD 3rd Dept:      https://www.nycourts.gov/reporter/rss/AD3rd.xml
+//   AD 4th Dept:      https://www.nycourts.gov/reporter/rss/AD4th.xml
+//   App. Term 1st:    https://nycourts.gov/reporter/RSS/AT1.xml
+//   App. Term 2nd:    https://nycourts.gov/reporter/RSS/AT2.xml
+//
+// NOTE: These feeds have no <pubDate> tag. The decided date is inside
+// the <description> HTML as "Month DD, YYYY" (e.g. "April 21, 2026").
 
-const CL_BASE = 'https://www.courtlistener.com/api/rest/v4';
+const FEEDS = [
+  { url: 'https://www.nycourts.gov/reporter/rss/COA.xml',   court: 'New York Court of Appeals' },
+  { url: 'https://www.nycourts.gov/reporter/rss/AD1st.xml', court: 'NY App. Div. — 1st Dept.' },
+  { url: 'https://www.nycourts.gov/reporter/rss/AD2nd.xml', court: 'NY App. Div. — 2nd Dept.' },
+  { url: 'https://www.nycourts.gov/reporter/rss/AD3rd.xml', court: 'NY App. Div. — 3rd Dept.' },
+  { url: 'https://www.nycourts.gov/reporter/rss/AD4th.xml', court: 'NY App. Div. — 4th Dept.' },
+  { url: 'https://www.nycourts.gov/reporter/rss/AT1.xml',   court: 'NY App. Term — 1st Dept.' },
+  { url: 'https://www.nycourts.gov/reporter/rss/AT2.xml',   court: 'NY App. Term — 2nd Dept.' },
+];
 
-const COURT_DISPLAY = {
-  ny:       'New York Court of Appeals',
-  nyappdiv: 'NY Appellate Division',
+const MONTHS = {
+  january:1, february:2, march:3, april:4, may:5, june:6,
+  july:7, august:8, september:9, october:10, november:11, december:12,
 };
 
-// CourtListener cluster → opinion object
-// Cluster fields: id, case_name, date_filed, absolute_url, citations[], sub_opinions[]
-// Sub-opinion fields: resource_uri, type, download_url
-async function fetchClusters(courtId, targetIso, apiKey) {
+// Parse "April 21, 2026" → "2026-04-21"
+function monthNameToIso(dateStr) {
+  if (!dateStr) return '';
+  const m = dateStr.match(/([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})/);
+  if (!m) return '';
+  const month = MONTHS[m[1].toLowerCase()];
+  if (!month) return '';
+  return `${m[3]}-${String(month).padStart(2, '0')}-${String(parseInt(m[2], 10)).padStart(2, '0')}`;
+}
+
+// Decode HTML entities and strip tags to plain text
+function htmlToPlainText(html) {
+  return html
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&').replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'").replace(/&nbsp;/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ').trim();
+}
+
+// Extract a tag's raw inner content from XML
+function extractTag(xml, tag) {
+  const re = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i');
+  const m = re.exec(xml);
+  if (!m) return '';
+  // Strip CDATA wrapper if present
+  return m[1].replace(/^<!\[CDATA\[/, '').replace(/\]\]>$/, '').trim();
+}
+
+// The description HTML contains: decided date, docket number, slip citation
+function parseDescription(rawDesc) {
+  const text = htmlToPlainText(rawDesc);
+  // e.g. "decided docket slip April 21, 2026 No. 29 2026 NY Slip Op 02363"
+  const dateMatch = text.match(/([A-Z][a-z]+ \d{1,2},?\s+\d{4})/);
+  const slipMatch = text.match(/\d{4}\s+NY\s+Slip\s+Op\s+\d+/i);
+  return {
+    decidedDate: dateMatch ? monthNameToIso(dateMatch[1]) : '',
+    docket: slipMatch ? slipMatch[0] : '',
+  };
+}
+
+function makeAbsolute(href) {
+  if (!href) return '';
+  if (href.startsWith('http')) return href;
+  return 'https://www.nycourts.gov' + (href.startsWith('/') ? href : '/' + href);
+}
+
+// nycourts.gov decision pages are .shtml; PDFs use the same path with .pdf
+function derivePdfUrl(viewUrl) {
+  if (!viewUrl) return '';
+  const pdf = viewUrl.replace(/\.s?html?$/i, '.pdf');
+  return pdf !== viewUrl ? pdf : '';
+}
+
+// Pull all <item> blocks out of RSS XML
+function parseItems(xml) {
+  const items = [];
+  const re = /<item[^>]*>([\s\S]*?)<\/item>/gi;
+  let m;
+  while ((m = re.exec(xml)) !== null) items.push(m[1]);
+  return items;
+}
+
+async function fetchFeed(url) {
+  const res = await fetch(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; RSS reader)',
+      'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+    },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status} from ${url}`);
+  const text = await res.text();
+  // Reject Cloudflare HTML error pages disguised as 200
+  if (!text.includes('<item')) throw new Error(`No RSS items in response from ${url}`);
+  return text;
+}
+
+async function getOpinionsFromFeed(feedUrl, courtName, targetIso) {
+  const xml = await fetchFeed(feedUrl);
+  const items = parseItems(xml);
   const results = [];
-  let url = `${CL_BASE}/clusters/?docket__court=${courtId}&date_filed=${targetIso}&page_size=100&format=json`;
 
-  while (url) {
-    const res = await fetch(url, {
-      headers: {
-        'Authorization': `Token ${apiKey}`,
-        'Accept': 'application/json',
-      },
+  for (const item of items) {
+    const title = extractTag(item, 'title');
+    if (!title) continue;
+    if (/\[U\]/i.test(title)) continue; // skip unpublished
+
+    const rawDesc = extractTag(item, 'description');
+    const { decidedDate, docket } = parseDescription(rawDesc);
+
+    if (decidedDate !== targetIso) continue;
+
+    const rawLink = extractTag(item, 'link').trim();
+    const viewUrl = makeAbsolute(rawLink);
+    const pdfUrl = derivePdfUrl(viewUrl);
+
+    results.push({
+      case_name: title,
+      docket,
+      court: courtName,
+      date: targetIso,
+      url: viewUrl,
+      pdf_url: pdfUrl,
+      summary: '',
     });
-    if (!res.ok) {
-      const text = await res.text().catch(() => '');
-      throw new Error(`CourtListener ${res.status} for court=${courtId}: ${text.slice(0, 200)}`);
-    }
-
-    const data = await res.json();
-
-    for (const cluster of (data.results || [])) {
-      const caseName = (cluster.case_name || cluster.case_name_full || '').trim();
-      if (!caseName) continue;
-
-      // Build the CourtListener view URL
-      const viewUrl = cluster.absolute_url
-        ? 'https://www.courtlistener.com' + cluster.absolute_url
-        : '';
-
-      // Extract best citation as docket identifier
-      let docket = '';
-      if (cluster.citations && cluster.citations.length > 0) {
-        const c = cluster.citations[0];
-        docket = [c.volume, c.reporter, c.page].filter(Boolean).join(' ');
-      }
-      // Fall back to cluster ID
-      if (!docket) docket = 'CL-' + cluster.id;
-
-      // PDF: look for download_url in sub_opinions
-      // sub_opinions may be an array of URLs (strings) or objects
-      let pdfUrl = '';
-      const subs = cluster.sub_opinions || [];
-      for (const sub of subs) {
-        if (typeof sub === 'object' && sub.download_url) {
-          pdfUrl = sub.download_url;
-          break;
-        }
-      }
-      // If sub_opinions are URLs not objects, skip — we'll fetch PDF on summarize
-
-      // Detect AD department from case_name or cluster metadata if available
-      let court = COURT_DISPLAY[courtId] || courtId;
-      if (courtId === 'nyappdiv') {
-        // CourtListener sometimes includes dept info in the docket's court_short_name
-        // If available, use it; otherwise fall back to generic label
-        const shortName = cluster.docket_short_name || '';
-        if (/1st/i.test(shortName)) court = 'NY App. Div. — 1st Dept.';
-        else if (/2nd/i.test(shortName)) court = 'NY App. Div. — 2nd Dept.';
-        else if (/3rd/i.test(shortName)) court = 'NY App. Div. — 3rd Dept.';
-        else if (/4th/i.test(shortName)) court = 'NY App. Div. — 4th Dept.';
-      }
-
-      results.push({
-        case_name: caseName,
-        docket,
-        court,
-        date: targetIso,
-        url: viewUrl,
-        pdf_url: pdfUrl,
-        summary: '',
-      });
-    }
-
-    url = data.next || null;
   }
 
   return results;
 }
 
 async function getNYPublishedOpinionsForDate(targetIso) {
-  const apiKey = process.env.COURTLISTENER_API_KEY;
-  if (!apiKey) throw new Error('COURTLISTENER_API_KEY env var not set. Get a free token at courtlistener.com');
-
   const all = [];
   const seen = new Set();
+  const errors = [];
 
-  for (const courtId of Object.keys(COURT_DISPLAY)) {
+  for (const feed of FEEDS) {
     try {
-      const opinions = await fetchClusters(courtId, targetIso, apiKey);
+      const opinions = await getOpinionsFromFeed(feed.url, feed.court, targetIso);
       for (const op of opinions) {
         const key = op.docket || op.case_name;
         if (seen.has(key)) continue;
@@ -110,11 +153,12 @@ async function getNYPublishedOpinionsForDate(targetIso) {
         all.push(op);
       }
     } catch (err) {
-      console.error('[CourtListener] court=' + courtId + ':', err.message);
+      console.error('[NY RSS] ' + feed.court + ':', err.message);
+      errors.push({ court: feed.court, error: err.message });
     }
   }
 
-  return all;
+  return { opinions: all, errors };
 }
 
 module.exports = { getNYPublishedOpinionsForDate };

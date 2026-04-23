@@ -7,8 +7,9 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'Missing or invalid date param (YYYY-MM-DD)' });
   }
   try {
-    const opinions = await getNYPublishedOpinionsForDate(date);
+    const { opinions, errors } = await getNYPublishedOpinionsForDate(date);
     res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=60');
+    if (errors.length) console.warn('[NY opinions] feed errors:', JSON.stringify(errors));
     return res.status(200).json(opinions);
   } catch (err) {
     console.error('NY opinions fetch error:', err.message);
