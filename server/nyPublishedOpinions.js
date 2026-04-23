@@ -100,8 +100,10 @@ async function fetchFeed(url) {
   });
   if (!res.ok) throw new Error(`HTTP ${res.status} from ${url}`);
   const text = await res.text();
-  // Reject Cloudflare HTML error pages disguised as 200
-  if (!text.includes('<item')) throw new Error(`No RSS items in response from ${url}`);
+  if (!text.includes('<item')) {
+    const preview = text.slice(0, 300).replace(/\s+/g, ' ');
+    throw new Error(`No RSS items from ${url} — response: ${preview}`);
+  }
   return text;
 }
 
