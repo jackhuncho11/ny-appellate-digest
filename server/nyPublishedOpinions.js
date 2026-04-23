@@ -16,8 +16,8 @@
 const FEEDS = [
   { url: 'https://www.nycourts.gov/reporter/rss/COA.xml',   court: 'New York Court of Appeals' },
   { url: 'https://www.nycourts.gov/reporter/rss/AD1st.xml', court: 'NY App. Div. — 1st Dept.' },
-  { url: 'https://www.nycourts.gov/reporter/rss/AD2nd.xml', court: 'NY App. Div. — 2nd Dept.' },
-  { url: 'https://www.nycourts.gov/reporter/rss/AD3rd.xml', court: 'NY App. Div. — 3rd Dept.' },
+  { url: 'https://www.nycourts.gov/reporter/rss/AD2d.xml',  court: 'NY App. Div. — 2nd Dept.' },
+  { url: 'https://www.nycourts.gov/reporter/rss/AD3d.xml',  court: 'NY App. Div. — 3rd Dept.' },
   { url: 'https://www.nycourts.gov/reporter/rss/AD4th.xml', court: 'NY App. Div. — 4th Dept.' },
   { url: 'https://www.nycourts.gov/reporter/rss/AT1.xml',   court: 'NY App. Term — 1st Dept.' },
   { url: 'https://www.nycourts.gov/reporter/rss/AT2.xml',   court: 'NY App. Term — 2nd Dept.' },
