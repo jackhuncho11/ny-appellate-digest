@@ -21,6 +21,8 @@ const COURT_ORDER = [
   "NY App. Div. — 2nd Dept.",
   "NY App. Div. — 3rd Dept.",
   "NY App. Div. — 4th Dept.",
+  "NY App. Term — 1st Dept.",
+  "NY App. Term — 2nd Dept.",
 ];
 
 function sortedCourts(bc) {
@@ -50,8 +52,7 @@ function buildEmailHTML(decisions, courts, byCourt, summaries, dateLabel) {
         + (caseSum ? "<div style='font-size:12px;color:#58595b;margin-top:4px;line-height:1.5;'><strong>Case:</strong> " + caseSum + "</div>" : "")
         + (decisionSum ? "<div style='font-size:12px;color:#58595b;margin-top:4px;line-height:1.5;'><strong>Decision:</strong> " + decisionSum + "</div>" : "")
         + "<div style='margin-top:4px;'>"
-        + (c.url ? "<a href='" + c.url + "' style='font-size:11px;color:#ff8200;font-weight:600;text-decoration:none;margin-right:12px;'>View &rarr;</a>" : "")
-        + (c.pdf_url ? "<a href='" + c.pdf_url + "' style='font-size:11px;color:#ff8200;font-weight:600;text-decoration:none;'>PDF &darr;</a>" : "")
+        + (c.url ? "<a href='" + c.url + "' style='font-size:11px;color:#ff8200;font-weight:600;text-decoration:none;'>View &rarr;</a>" : "")
         + "</div></div>";
     }
     rows += "<div style='margin-bottom:18px'>"
@@ -175,12 +176,10 @@ export default function App() {
   const doSummaries = useCallback(async (cases) => {
     setSumPhase("fetching");
     for (let i = 0; i < cases.length; i++) {
-      const c = cases[i];
-      setProgress(`Summarizing ${i + 1} of ${cases.length}: ${c.case_name}…`);
-      const result = await summarizeOpinion(c);
-      setSummaries(prev => ({ ...prev, [c.docket || c.case_name]: result }));
-      // 30-second delay between calls to stay under 10k tokens/min rate limit
-      if (i < cases.length - 1) await new Promise(r => setTimeout(r, 30000));
+      setProgress(`Summarizing ${i + 1} of ${cases.length}: ${cases[i].case_name}…`);
+      const result = await summarizeOpinion(cases[i]);
+      setSummaries(prev => ({ ...prev, [cases[i].docket || cases[i].case_name]: result }));
+      if (i < cases.length - 1) await new Promise(r => setTimeout(r, 2000));
     }
     setSumPhase("done"); setProgress("");
   }, []);
@@ -360,11 +359,22 @@ export default function App() {
                                 ))}
                               </div>
                             )}
-                            {summaries[c.docket || c.case_name]?.error && (
-                              <div style={{ fontSize: 11, color: "#9ca3af", marginTop: 4, fontStyle: "italic" }}>Unable to summarize</div>
+                            {(summaries[c.docket || c.case_name]?.error || summaries[c.docket || c.case_name]?.rateLimited) && (
+                              <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4 }}>
+                                <span style={{ fontSize: 11, color: "#f59e0b", fontStyle: "italic" }}>
+                                  {summaries[c.docket || c.case_name]?.rateLimited ? "Rate limited" : "Unable to summarize"}
+                                </span>
+                                <button onClick={async () => {
+                                  setSummaries(prev => ({ ...prev, [c.docket || c.case_name]: { retrying: true } }));
+                                  const result = await summarizeOpinion(c);
+                                  setSummaries(prev => ({ ...prev, [c.docket || c.case_name]: result }));
+                                }} style={{ fontSize: 10, fontWeight: 700, color: "#ff8200", background: "none", border: "1px solid #ff8200", borderRadius: 4, padding: "1px 7px", cursor: "pointer" }}>
+                                  Retry
+                                </button>
+                              </div>
                             )}
-                            {summaries[c.docket || c.case_name]?.rateLimited && (
-                              <div style={{ fontSize: 11, color: "#f59e0b", marginTop: 4, fontStyle: "italic" }}>Rate limited — try again in a minute</div>
+                            {summaries[c.docket || c.case_name]?.retrying && (
+                              <div style={{ fontSize: 11, color: "#9ca3af", marginTop: 4, fontStyle: "italic" }}><Spinner size={10} /> Retrying…</div>
                             )}
                             {summaries[c.docket || c.case_name]?.case_summary && (
                               <div style={{ fontSize: 12, color: "#333333", marginTop: 4, lineHeight: 1.5, background: "#f8f4ff", borderLeft: "3px solid #ff8200", padding: "4px 8px", borderRadius: "0 4px 4px 0" }}>
@@ -379,7 +389,6 @@ export default function App() {
                           </div>
                           <div style={{ display: "flex", flexDirection: "column", gap: 3, alignItems: "flex-end", flexShrink: 0 }}>
                             {c.url && <a href={c.url} target="_blank" rel="noreferrer" style={{ fontSize: 11, color: "#111111", fontWeight: 600, textDecoration: "none" }}>View →</a>}
-                            {c.pdf_url && <a href={c.pdf_url} target="_blank" rel="noreferrer" style={{ fontSize: 11, color: "#ff8200", fontWeight: 600, textDecoration: "none" }}>PDF ↓</a>}
                           </div>
                         </div>
                       ))}
