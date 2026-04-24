@@ -179,7 +179,7 @@ export default function App() {
       setProgress(`Summarizing ${i + 1} of ${cases.length}: ${cases[i].case_name}…`);
       const result = await summarizeOpinion(cases[i]);
       setSummaries(prev => ({ ...prev, [cases[i].docket || cases[i].case_name]: result }));
-      if (i < cases.length - 1) await new Promise(r => setTimeout(r, 2000));
+      if (i < cases.length - 1) await new Promise(r => setTimeout(r, 6000));
     }
     setSumPhase("done"); setProgress("");
   }, []);
@@ -328,7 +328,19 @@ export default function App() {
                     {progress && <span style={{ fontSize: 11, color: "#58595b" }}>{progress}</span>}
                     {sumPhase === "idle" && <button onClick={() => doSummaries(allDecisions)} style={{ background: "#ff8200", color: "#fff", border: "none", borderRadius: 5, padding: "5px 10px", fontSize: 11, fontWeight: 600, cursor: "pointer" }}>✨ Summaries</button>}
                     {sumPhase === "fetching" && <span style={{ fontSize: 11, color: "#ff8200" }}><Spinner size={11} /> Summarizing…</span>}
-                    {sumPhase === "done" && <span style={{ fontSize: 11, color: "#ff8200", fontWeight: 700 }}>✨ {sumCount}</span>}
+                    {sumPhase === "done" && (
+                      <>
+                        <span style={{ fontSize: 11, color: "#ff8200", fontWeight: 700 }}>✨ {sumCount}</span>
+                        {allDecisions.some(c => summaries[c.docket || c.case_name]?.rateLimited || summaries[c.docket || c.case_name]?.error) && (
+                          <button onClick={() => {
+                            const failed = allDecisions.filter(c => summaries[c.docket || c.case_name]?.rateLimited || summaries[c.docket || c.case_name]?.error);
+                            doSummaries(failed);
+                          }} style={{ background: "none", color: "#ff8200", border: "1px solid #ff8200", borderRadius: 5, padding: "5px 10px", fontSize: 11, fontWeight: 600, cursor: "pointer" }}>
+                            ↺ Retry Failed
+                          </button>
+                        )}
+                      </>
+                    )}
                   </div>
                 </div>
 
