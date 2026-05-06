@@ -12,7 +12,8 @@
     "pdf-parse": "1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "resend": "^6.10.0"
+    "resend": "^6.10.0",
+    "unpdf": "^1.6.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",

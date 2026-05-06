@@ -12,7 +12,7 @@ const COURT_TO_CL = {
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  const { case_name, docket, court, url } = req.body;
+  const { case_name, docket, court, url, pdf_url } = req.body;
   if (!case_name) return res.status(400).json({ error: "Missing case_name" });
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -48,6 +48,35 @@ TAGS: [tag1, tag2]`;
       decision_summary: decisionMatch ? decisionMatch[1].trim() : "",
       tags: tagsMatch ? tagsMatch[1].split(",").map(t => t.trim()).filter(Boolean) : [],
     };
+  }
+
+  async function extractPdfText(pdfUrl) {
+    if (!pdfUrl) return null;
+    const encoded = encodeURI(pdfUrl);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    try {
+      const r = await fetch(encoded, {
+        signal: controller.signal,
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; RSS reader)",
+          "Accept": "application/pdf,*/*",
+        },
+      });
+      if (!r.ok) return null;
+      const buffer = await r.arrayBuffer();
+      const { extractText } = await import("unpdf");
+      const { text } = await extractText(new Uint8Array(buffer), { mergePages: true });
+      const cleaned = (typeof text === "string" ? text : (text || []).join(" "))
+        .replace(/\s+/g, " ").trim();
+      if (cleaned.length < 200) return null;
+      return cleaned.slice(0, 6000);
+    } catch (e) {
+      console.error("PDF extract failed:", e.message);
+      return null;
+    } finally {
+      clearTimeout(timeout);
+    }
   }
 
   async function extractOpinionText(pageUrl) {
@@ -129,7 +158,14 @@ TAGS: [tag1, tag2]`;
   }
 
   try {
-    const opinionText = (await extractOpinionText(url)) || (await fetchFromCourtListener(case_name, docket, court));
+    // Source priority: PDF text extraction → HTML scrape → CourtListener.
+    // ca2 publishes only PDFs; NY decisions also have a sibling .pdf URL that
+    // is reachable from serverless even when nycourts.gov .shtml is Cloudflare-blocked.
+    const pdfCandidate = pdf_url || (url && /\.pdf(\?|#|$)/i.test(url) ? url : null);
+    const opinionText =
+      (await extractPdfText(pdfCandidate)) ||
+      (await extractOpinionText(url)) ||
+      (await fetchFromCourtListener(case_name, docket, court));
 
     const userMessage = opinionText
       ? `Here is the court opinion for ${case_name} (${docket}), ${court}:\n\n${opinionText}\n\n---\n\n${prompt}`
@@ -165,7 +201,14 @@ TAGS: [tag1, tag2]`;
 
     const data = await response.json();
     const text = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("").trim();
-    return res.status(200).json(parseSummaries(text));
+    const parsed = parseSummaries(text);
+    if (!parsed.case_summary && !parsed.decision_summary) {
+      // Claude returned prose without the CASE:/DECISION: structure — typically
+      // a refusal because no opinion content was available. Surface as an error
+      // so the UI shows "Unable to summarize" instead of silently rendering nothing.
+      return res.status(422).json({ error: "no_summary", raw: text.slice(0, 400) });
+    }
+    return res.status(200).json(parsed);
 
   } catch (err) {
     console.error("Summarize error:", err.message);

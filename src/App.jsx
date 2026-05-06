@@ -179,7 +179,7 @@ export default function App() {
       setProgress(`Summarizing ${i + 1} of ${cases.length}: ${cases[i].case_name}…`);
       const result = await summarizeOpinion(cases[i]);
       setSummaries(prev => ({ ...prev, [cases[i].docket || cases[i].case_name]: result }));
-      if (i < cases.length - 1) await new Promise(r => setTimeout(r, 6000));
+      if (i < cases.length - 1) await new Promise(r => setTimeout(r, 15000));
     }
     setSumPhase("done"); setProgress("");
   }, []);
