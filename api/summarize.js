@@ -52,6 +52,7 @@ TAGS: [tag1, tag2]`;
 
   async function extractOpinionText(pageUrl) {
     if (!pageUrl) return null;
+    if (/\.pdf(\?|#|$)/i.test(pageUrl)) return null;
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 15000);
     try {
@@ -63,6 +64,8 @@ TAGS: [tag1, tag2]`;
         },
       });
       if (!r.ok) return null;
+      const ct = r.headers.get("content-type") || "";
+      if (!/text\/html|xml|text\/plain/i.test(ct)) return null;
       const html = await r.text();
       const text = html
         .replace(/<script[\s\S]*?<\/script>/gi, "")
@@ -89,32 +92,32 @@ TAGS: [tag1, tag2]`;
     const headers = { "Accept": "application/json" };
     if (clApiKey) headers["Authorization"] = `Token ${clApiKey}`;
 
-    // Extract year from docket like "2026 NY Slip Op 02363"
     const yearMatch = docketStr && docketStr.match(/^(\d{4})\s/);
 
-    const params = new URLSearchParams({ case_name: caseName, page_size: "3", format: "json", order_by: "-date_filed" });
-    if (courtId) params.set("docket__court", courtId);
+    // Strip Lucene-reserved characters that break CL's search ("In Re:" 500s the API).
+    const safeQ = caseName.replace(/[+\-!(){}\[\]^"~*?:\\\/&|]/g, " ").replace(/\s+/g, " ").trim();
+    const params = new URLSearchParams({ type: "o", q: safeQ, order_by: "dateFiled desc" });
+    if (courtId) params.set("court", courtId);
     if (yearMatch) {
-      params.set("date_filed_min", `${yearMatch[1]}-01-01`);
-      params.set("date_filed_max", `${yearMatch[1]}-12-31`);
+      params.set("filed_after", `${yearMatch[1]}-01-01`);
+      params.set("filed_before", `${yearMatch[1]}-12-31`);
     }
 
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 12000);
     try {
-      const res = await fetch(`https://www.courtlistener.com/api/rest/v4/clusters/?${params}`, { signal: controller.signal, headers });
+      const res = await fetch(`https://www.courtlistener.com/api/rest/v4/search/?${params}`, { signal: controller.signal, headers });
       if (!res.ok) return null;
       const data = await res.json();
-      const cluster = (data.results || [])[0];
-      if (!cluster) return null;
+      const result = (data.results || [])[0];
+      if (!result) return null;
 
-      for (const sub of (cluster.sub_opinions || [])) {
-        const opUrl = typeof sub === "string" ? sub : sub.resource_uri;
-        if (!opUrl) continue;
-        const opRes = await fetch(opUrl, { signal: controller.signal, headers });
+      for (const op of (result.opinions || [])) {
+        if (!op.id) continue;
+        const opRes = await fetch(`https://www.courtlistener.com/api/rest/v4/opinions/${op.id}/`, { signal: controller.signal, headers });
         if (!opRes.ok) continue;
-        const op = await opRes.json();
-        const text = (op.plain_text || "").trim();
+        const opData = await opRes.json();
+        const text = (opData.plain_text || "").trim();
         if (text.length > 200) return text.slice(0, 6000);
       }
       return null;

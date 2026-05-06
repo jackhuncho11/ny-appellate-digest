@@ -1,33 +1,28 @@
-// 2nd Circuit opinions scraper
-// Source: ww3.ca2.uscourts.gov/decisions (iSearch)
-// Table row format (confirmed from live page):
-//   <td><strong><a href="/decisions/isysquery/{uuid}/{n}/doc/{docket}_opn.pdf#xml=...">DOCKET</a></strong></td>
-//   <td>CASE NAME</td>
-//   <td>MM-DD-YYYY</td>
-//   <td>OPN</td>
+// 2nd Circuit opinions
 //
-// Only OPN (opinion) rows are included; SUM (summary order) rows are skipped.
+// Primary source: ww3.ca2.uscourts.gov dtSearch (the same endpoint the
+// official decisions.html search form posts to). Returns clean HTML rows
+// with docket, caption, date, and PDF URL.
+//
+// Fallback: CourtListener search API. Used when ww3.ca2 is unreachable
+// (e.g. F5 firewall blocks the serverless egress IP).
+
+const DT_SEARCH_URL = 'https://ww3.ca2.uscourts.gov/dtSearch/dtisapi6.dll';
+const OPN_INDEX = '*{aa12e167958cdbcaa709fa14b9161a4a} OPN';
 
 function htmlToText(html) {
   return html
-    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
     .replace(/&nbsp;/g, ' ').replace(/&#039;/g, "'").replace(/&quot;/g, '"')
     .replace(/\s+/g, ' ').trim();
 }
 
-// "04-10-2026" → "2026-04-10"
-function mdyDashToIso(s) {
-  const [mm, dd, yyyy] = s.trim().split('-');
-  if (!mm || !dd || !yyyy) return '';
-  return yyyy + '-' + mm.padStart(2, '0') + '-' + dd.padStart(2, '0');
-}
-
-// Strip #xml=... fragment from PDF href
-function cleanPdfHref(href) {
-  return href.split('#')[0];
+// "5/4/2026" → "2026-05-04"
+function mdySlashToIso(s) {
+  const m = s.trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (!m) return '';
+  return `${m[3]}-${m[1].padStart(2, '0')}-${m[2].padStart(2, '0')}`;
 }
 
 function makeAbsolute(href) {
@@ -36,75 +31,126 @@ function makeAbsolute(href) {
   return 'https://ww3.ca2.uscourts.gov' + (href.startsWith('/') ? href : '/' + href);
 }
 
-function parseSecondCircuitHtml(html, targetIso) {
+function parseDtSearchResults(html) {
   const results = [];
+  const rowRe = /<TR\s[^>]*>([\s\S]*?)<\/TR>/gi;
+  let m;
+  while ((m = rowRe.exec(html)) !== null) {
+    const rowHtml = m[1];
 
-  const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
-  let rowM;
-
-  while ((rowM = rowRe.exec(html)) !== null) {
-    const rowHtml = rowM[1];
-
-    const cells = [];
-    const cellRe = /<td[^>]*>([\s\S]*?)<\/td>/gi;
-    let cellM;
-    while ((cellM = cellRe.exec(rowHtml)) !== null) {
-      cells.push({ text: htmlToText(cellM[1]).trim(), html: cellM[1] });
+    const linkRe = /<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
+    const links = [];
+    let lm;
+    while ((lm = linkRe.exec(rowHtml)) !== null) {
+      links.push({ href: lm[1], text: htmlToText(lm[2]) });
     }
+    if (!links.length) continue;
 
-    if (cells.length < 4) continue;
+    const pdfLink = links.find(l => /\.pdf(\?|#|$)/i.test(l.href));
+    if (!pdfLink) continue;
 
-    // Last cell = type; only include OPN
-    if (cells[cells.length - 1].text.trim() !== 'OPN') continue;
+    const dateM = rowHtml.match(/Date Posted:\s*<\/B>\s*([\d/]+)/i);
+    const captionM = rowHtml.match(/Caption:\s*<\/B>\s*<a[^>]*>([\s\S]*?)<\/a>/i);
+    const docketM = rowHtml.match(/Docket\s*#:\s*<\/B>\s*<a[^>]*>([\s\S]*?)<\/a>/i);
+    const typeM = rowHtml.match(/Type:\s*<\/B>\s*([^<]+)/i);
 
-    // 3rd-to-last cell = date MM-DD-YYYY
-    const dateCell = cells[cells.length - 2].text;
-    const dateM = dateCell.match(/\b(\d{2}-\d{2}-\d{4})\b/);
-    if (!dateM) continue;
-    const rowIso = mdyDashToIso(dateM[1]);
-    if (rowIso !== targetIso) continue;
+    if (typeM && !/OPN/i.test(typeM[1])) continue;
+    if (!dateM || !captionM || !docketM) continue;
 
-    // 2nd-to-last cell = case name
-    const caseName = cells[cells.length - 3].text.replace(/\s+/g, ' ').trim();
-    if (!caseName) continue;
+    const iso = mdySlashToIso(dateM[1]);
+    if (!iso) continue;
 
-    // 1st cell = docket number (linked to PDF)
-    const docket = cells[0].text.replace(/[\[\]]/g, '').replace(/\s+/g, ' ').trim();
-    if (!docket) continue;
-
-    // PDF URL from first cell's link
-    let pdf_url = '';
-    const pdfM = cells[0].html.match(/href="([^"]+\.pdf[^"]*)"/i);
-    if (pdfM) {
-      pdf_url = makeAbsolute(cleanPdfHref(pdfM[1]));
-    }
-
+    const pdf_url = makeAbsolute(pdfLink.href);
     results.push({
-      case_name: caseName,
-      docket,
+      case_name: htmlToText(captionM[1]),
+      docket: htmlToText(docketM[1]).replace(/-cv$|-cr$/i, ''),
       court: 'Second Circuit Court of Appeals',
-      date: rowIso,
+      date: iso,
       url: pdf_url,
       pdf_url,
       summary: '',
     });
   }
+  return results;
+}
 
+async function fetchFromDtSearch(targetIso) {
+  // dtSearch wants YYYY/MM/DD
+  const slashDate = targetIso.replace(/-/g, '/');
+
+  const body = new URLSearchParams();
+  body.set('index', OPN_INDEX);
+  body.set('request', '');
+  body.set('searchType', 'allwords');
+  body.set('fileConditions', `xfilter(date "${slashDate}~~${slashDate}")`);
+  body.set('booleanConditions', '');
+  body.set('cmd', 'search');
+  body.set('SearchForm', '');
+  body.set('dtsPdfWh', 'x');
+  body.set('OrigSearchForm', '/decisions.html');
+  body.set('autoStopLimit', '5000');
+  body.set('pageSize', '100');
+  body.set('sort', 'date');
+
+  const res = await fetch(DT_SEARCH_URL, {
+    method: 'POST',
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Origin': 'https://ww3.ca2.uscourts.gov',
+      'Referer': 'https://ww3.ca2.uscourts.gov/decisions.html',
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: body.toString(),
+  });
+  if (!res.ok) throw new Error('HTTP ' + res.status + ' from ww3.ca2.uscourts.gov');
+  const html = await res.text();
+  return parseDtSearchResults(html).filter(r => r.date === targetIso);
+}
+
+async function fetchFromCourtListener(targetIso) {
+  const params = new URLSearchParams({
+    type: 'o',
+    court: 'ca2',
+    filed_after: targetIso,
+    filed_before: targetIso,
+    stat_Published: 'on',
+    order_by: 'dateFiled desc',
+  });
+  const headers = { 'Accept': 'application/json' };
+  if (process.env.COURTLISTENER_API_KEY) {
+    headers['Authorization'] = `Token ${process.env.COURTLISTENER_API_KEY}`;
+  }
+  const res = await fetch(`https://www.courtlistener.com/api/rest/v4/search/?${params}`, { headers });
+  if (!res.ok) throw new Error('HTTP ' + res.status + ' from courtlistener.com');
+  const data = await res.json();
+  const results = [];
+  for (const r of data.results || []) {
+    if (r.dateFiled !== targetIso) continue;
+    const op = (r.opinions || [])[0] || {};
+    const pdf_url = op.download_url || '';
+    const cl_url = r.absolute_url ? `https://www.courtlistener.com${r.absolute_url}` : '';
+    results.push({
+      case_name: r.caseName || '',
+      docket: r.docketNumber || '',
+      court: 'Second Circuit Court of Appeals',
+      date: r.dateFiled,
+      url: pdf_url || cl_url,
+      pdf_url,
+      summary: '',
+    });
+  }
   return results;
 }
 
 async function getSecondCircuitOpinionsForDate(targetIso) {
-  const url = 'https://ww3.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date&IW_BATCHSIZE=50';
-  const res = await fetch(url, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'Accept-Language': 'en-US,en;q=0.9',
-    },
-  });
-  if (!res.ok) throw new Error('HTTP ' + res.status + ' from ww3.ca2.uscourts.gov');
-  const html = await res.text();
-  return parseSecondCircuitHtml(html, targetIso);
+  try {
+    return await fetchFromDtSearch(targetIso);
+  } catch (err) {
+    console.error('2nd Cir dtSearch failed, falling back to CourtListener:', err.message);
+    return await fetchFromCourtListener(targetIso);
+  }
 }
 
 module.exports = { getSecondCircuitOpinionsForDate };
