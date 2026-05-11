@@ -140,7 +140,7 @@ async function getOpinionsFromFeed(feedUrl, courtName, targetIso) {
   return results;
 }
 
-async function getNYPublishedOpinionsForDate(targetIso) {
+async function fetchFromRss(targetIso) {
   const all = [];
   const seen = new Set();
   const errors = [];
@@ -161,6 +161,95 @@ async function getNYPublishedOpinionsForDate(targetIso) {
   }
 
   return { opinions: all, errors };
+}
+
+// CL court_id → display name. nyappdiv is not split by department in CL,
+// so AD opinions get a generic label in the fallback path.
+const CL_COURT_NAMES = {
+  ny: 'New York Court of Appeals',
+  nyappdiv: 'NY App. Div.',
+  nyappterm: 'NY App. Term',
+};
+
+async function fetchFromCourtListener(targetIso) {
+  const courts = Object.keys(CL_COURT_NAMES);
+  const headers = { 'Accept': 'application/json' };
+  if (process.env.COURTLISTENER_API_KEY) {
+    headers['Authorization'] = `Token ${process.env.COURTLISTENER_API_KEY}`;
+  }
+
+  const all = [];
+  const seen = new Set();
+
+  for (const courtId of courts) {
+    const params = new URLSearchParams({
+      type: 'o',
+      court: courtId,
+      filed_after: targetIso,
+      filed_before: targetIso,
+      stat_Published: 'on',
+      order_by: 'dateFiled desc',
+    });
+    const res = await fetch(`https://www.courtlistener.com/api/rest/v4/search/?${params}`, { headers });
+    if (!res.ok) {
+      console.error('[NY CL] ' + courtId + ': HTTP ' + res.status);
+      continue;
+    }
+    const data = await res.json();
+    for (const r of data.results || []) {
+      if (r.dateFiled !== targetIso) continue;
+      const slipOp = (r.citation && r.citation[0]) || '';
+      const op = (r.opinions || [])[0] || {};
+      // CL's download_url for NY opinions is the nycourts.gov slip op .shtml.
+      const viewUrl = op.download_url || (r.absolute_url ? `https://www.courtlistener.com${r.absolute_url}` : '');
+      const pdfUrl = derivePdfUrl(viewUrl);
+      const key = slipOp || r.docketNumber || r.caseName;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      all.push({
+        case_name: r.caseName || '',
+        docket: slipOp || r.docketNumber || '',
+        court: CL_COURT_NAMES[courtId] || courtId,
+        date: r.dateFiled,
+        url: viewUrl,
+        pdf_url: pdfUrl,
+        summary: '',
+      });
+    }
+  }
+  return all;
+}
+
+async function getNYPublishedOpinionsForDate(targetIso) {
+  const { opinions, errors } = await fetchFromRss(targetIso);
+  // Cloudflare blocks the RSS feeds intermittently and unevenly — sometimes
+  // 3 of 7 feeds work and the rest 403. If any feed errored, merge in
+  // CourtListener so we don't silently lose the failed courts. RSS records
+  // win on conflicts (slip op match) because they preserve the department.
+  if (errors.length > 0) {
+    try {
+      const clOpinions = await fetchFromCourtListener(targetIso);
+      const haveSlipOps = new Set(
+        opinions.map(o => o.docket || o.case_name).filter(Boolean)
+      );
+      const merged = opinions.slice();
+      for (const op of clOpinions) {
+        const key = op.docket || op.case_name;
+        if (haveSlipOps.has(key)) continue;
+        haveSlipOps.add(key);
+        merged.push(op);
+      }
+      return {
+        opinions: merged,
+        errors,
+        fallback: merged.length > opinions.length ? 'courtlistener' : undefined,
+      };
+    } catch (err) {
+      console.error('[NY CL fallback] failed:', err.message);
+      errors.push({ court: 'CourtListener', error: err.message });
+    }
+  }
+  return { opinions, errors };
 }
 
 module.exports = { getNYPublishedOpinionsForDate };
