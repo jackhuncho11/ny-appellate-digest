@@ -49,10 +49,14 @@ function parseDtSearchResults(html) {
     const pdfLink = links.find(l => /\.pdf(\?|#|$)/i.test(l.href));
     if (!pdfLink) continue;
 
-    const dateM = rowHtml.match(/Date Posted:\s*<\/B>\s*([\d/]+)/i);
-    const captionM = rowHtml.match(/Caption:\s*<\/B>\s*<a[^>]*>([\s\S]*?)<\/a>/i);
+    // The results HTML now exposes the date as "<B>Date: </B>6/24/2026" and the
+    // caption only via a "var captionStr = "...";" assignment inside a <script>
+    // block (it used to be inline "Caption:</B><a>...</a>" markup).
+    const dateM = rowHtml.match(/Date(?:\s*Posted)?:\s*<\/B>\s*([\d/]+)/i);
+    const captionM = rowHtml.match(/var\s+captionStr\s*=\s*"([^"]*)"/i)
+      || rowHtml.match(/Caption:\s*<\/B>\s*<a[^>]*>([\s\S]*?)<\/a>/i);
     const docketM = rowHtml.match(/Docket\s*#:\s*<\/B>\s*<a[^>]*>([\s\S]*?)<\/a>/i);
-    const typeM = rowHtml.match(/Type:\s*<\/B>\s*([^<]+)/i);
+    const typeM = rowHtml.match(/Type:\s*<\/B>\s*([^<\n]+)/i);
 
     if (typeM && !/OPN/i.test(typeM[1])) continue;
     if (!dateM || !captionM || !docketM) continue;
