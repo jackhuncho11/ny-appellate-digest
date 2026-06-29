@@ -1,0 +1,38 @@
+name: Harvest NY opinions
+
+on:
+  schedule:
+    # Every 2 hours. NY courts publish on weekday mornings (ET); this keeps the
+    # snapshot fresh without burning many Actions minutes (~30s per run).
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: harvest-ny-opinions
+  cancel-in-progress: false
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Harvest feeds
+        run: node scripts/harvest-ny-opinions.js
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain data/ny-opinions.json)" ]]; then
+            git add data/ny-opinions.json
+            git commit -m "Update NY opinions snapshot [skip ci]"
+            git push
+            echo "Snapshot updated."
+          else
+            echo "No change."
+          fi

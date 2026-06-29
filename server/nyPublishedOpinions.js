@@ -107,37 +107,64 @@ async function fetchFeed(url) {
   return text;
 }
 
-async function getOpinionsFromFeed(feedUrl, courtName, targetIso) {
-  const xml = await fetchFeed(feedUrl);
-  const items = parseItems(xml);
+// Parse every published item in a feed into opinion records, each tagged with
+// its own decided date and the feed's department/court name.
+function parseFeedItems(xml, courtName) {
   const results = [];
-
-  for (const item of items) {
+  for (const item of parseItems(xml)) {
     const title = extractTag(item, 'title');
     if (!title) continue;
     if (/\[U\]/i.test(title)) continue; // skip unpublished
 
-    const rawDesc = extractTag(item, 'description');
-    const { decidedDate, docket } = parseDescription(rawDesc);
+    const { decidedDate, docket } = parseDescription(extractTag(item, 'description'));
+    if (!decidedDate) continue;
 
-    if (decidedDate !== targetIso) continue;
-
-    const rawLink = extractTag(item, 'link').trim();
-    const viewUrl = makeAbsolute(rawLink);
-    const pdfUrl = derivePdfUrl(viewUrl);
-
+    const viewUrl = makeAbsolute(extractTag(item, 'link').trim());
     results.push({
       case_name: title,
       docket,
       court: courtName,
-      date: targetIso,
+      date: decidedDate,
       url: viewUrl,
-      pdf_url: pdfUrl,
+      pdf_url: derivePdfUrl(viewUrl),
       summary: '',
     });
   }
-
   return results;
+}
+
+async function getOpinionsFromFeed(feedUrl, courtName, targetIso) {
+  const xml = await fetchFeed(feedUrl);
+  return parseFeedItems(xml, courtName).filter(o => o.date === targetIso);
+}
+
+// Snapshot every recent opinion across all departments. Run by the GitHub
+// Actions harvester (GH runners can reach the feeds; Vercel/Cloudflare cannot),
+// not at request time. Retries each feed since Cloudflare 403s intermittently.
+// Reports which courts succeeded so the caller can avoid overwriting a
+// department's data with nothing when its feed is transiently blocked.
+async function harvestAllFeeds() {
+  const opinions = [];
+  const errors = [];
+  const succeededCourts = [];
+
+  for (const feed of FEEDS) {
+    let xml, lastErr;
+    for (let attempt = 0; attempt < 3 && !xml; attempt++) {
+      if (attempt > 0) await new Promise(r => setTimeout(r, 750 * attempt));
+      try { xml = await fetchFeed(feed.url); }
+      catch (e) { lastErr = e; }
+    }
+    if (!xml) {
+      console.error('[harvest] ' + feed.court + ':', lastErr && lastErr.message);
+      errors.push({ court: feed.court, error: lastErr ? lastErr.message : 'unknown' });
+      continue;
+    }
+    succeededCourts.push(feed.court);
+    for (const op of parseFeedItems(xml, feed.court)) opinions.push(op);
+  }
+
+  return { opinions, errors, succeededCourts };
 }
 
 async function fetchFromRss(targetIso) {
@@ -220,7 +247,34 @@ async function fetchFromCourtListener(targetIso) {
   return all;
 }
 
+// The harvester commits this snapshot to the repo; we read it from the GitHub
+// raw CDN (reachable from Vercel) at request time, so fresh harvests appear
+// without redeploying. This is the only path that preserves the department for
+// Appellate Division opinions.
+const HARVEST_URL = 'https://raw.githubusercontent.com/jackhuncho11/ny-appellate-digest/master/data/ny-opinions.json';
+
+async function fetchHarvest() {
+  try {
+    const res = await fetch(HARVEST_URL, { headers: { 'Accept': 'application/json' }, cache: 'no-store' });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data && Array.isArray(data.opinions) ? data : null;
+  } catch (err) {
+    console.error('[NY harvest] fetch failed:', err.message);
+    return null;
+  }
+}
+
 async function getNYPublishedOpinionsForDate(targetIso) {
+  // Primary source: the harvested snapshot (departments preserved). Trust it for
+  // any date within its rolling window — minDate or newer — including days with
+  // genuinely zero opinions. Only dates older than the window fall through.
+  const harvest = await fetchHarvest();
+  if (harvest && harvest.minDate && targetIso >= harvest.minDate) {
+    const opinions = harvest.opinions.filter(o => o.date === targetIso);
+    return { opinions, errors: [], source: 'harvest', generatedAt: harvest.generatedAt };
+  }
+
   const { opinions, errors } = await fetchFromRss(targetIso);
   // Cloudflare blocks the RSS feeds intermittently and unevenly — sometimes
   // 3 of 7 feeds work and the rest 403. If any feed errored, merge in
@@ -252,4 +306,4 @@ async function getNYPublishedOpinionsForDate(targetIso) {
   return { opinions, errors };
 }
 
-module.exports = { getNYPublishedOpinionsForDate };
+module.exports = { getNYPublishedOpinionsForDate, harvestAllFeeds };
