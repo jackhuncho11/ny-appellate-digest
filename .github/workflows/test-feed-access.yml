@@ -1,0 +1,29 @@
+name: Test feed access
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test via curl
+        run: |
+          for u in COA AD1st AD2d AD3d AD4th AT1 AT2; do
+            code=$(curl -s -o /tmp/f.xml -w "%{http_code}" -A "Mozilla/5.0 (compatible; RSS reader)" "https://www.nycourts.gov/reporter/rss/$u.xml")
+            items=$(grep -c "<item" /tmp/f.xml || true)
+            echo "curl  $u -> HTTP $code, items=$items"
+          done
+      - name: Test via node fetch
+        run: |
+          node -e '
+          (async () => {
+            for (const u of ["COA","AD1st","AD2d","AD3d","AD4th","AT1","AT2"]) {
+              try {
+                const r = await fetch("https://www.nycourts.gov/reporter/rss/"+u+".xml", { headers: { "User-Agent": "Mozilla/5.0 (compatible; RSS reader)", "Accept": "application/rss+xml, application/xml, text/xml, */*" } });
+                const t = await r.text();
+                console.log("node  "+u+" -> HTTP "+r.status+", items="+((t.match(/<item/gi)||[]).length));
+              } catch (e) { console.log("node  "+u+" -> ERR "+e.message); }
+            }
+          })();
+          '
