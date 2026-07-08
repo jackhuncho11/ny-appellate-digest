@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-08T10:18:23.009Z",
+  "generatedAt": "2026-07-08T14:06:17.226Z",
   "minDate": "2026-02-20",
-  "maxDate": "2026-07-02",
-  "count": 387,
+  "maxDate": "2026-07-07",
+  "count": 388,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "People ex rel. Melillo v Richards",
+      "docket": "2026 NY Slip Op 04268",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-07",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04268.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04268.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Ark448 Doe v Maryknoll",
       "docket": "2026 NY Slip Op 04255",
