@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-08T19:25:11.898Z",
+  "generatedAt": "2026-07-08T21:07:42.890Z",
   "minDate": "2026-02-20",
-  "maxDate": "2026-07-07",
-  "count": 388,
+  "maxDate": "2026-07-08",
+  "count": 461,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,663 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "16011, LLC v Bank of Am., N.A.",
+      "docket": "2026 NY Slip Op 04269",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04269.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04269.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Akimov v Bilik",
+      "docket": "2026 NY Slip Op 04270",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04270.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04270.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Bank of N.Y. Mellon Trust Co. v Pruitt",
+      "docket": "2026 NY Slip Op 04271",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04271.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04271.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Berkley Ins. Co. v Farm Family Ins. Co.",
+      "docket": "2026 NY Slip Op 04272",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04272.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04272.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Byars v Transport Workers Union of Am.",
+      "docket": "2026 NY Slip Op 04273",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04273.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04273.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Chevy Chase Funding, LLC v Aucapina",
+      "docket": "2026 NY Slip Op 04274",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04274.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04274.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Convale v First 800ConeyIsland, LLC",
+      "docket": "2026 NY Slip Op 04275",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04275.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04275.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Coyle v JPMorgan Chase Bank, N.A.",
+      "docket": "2026 NY Slip Op 04276",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04276.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04276.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "DeSilvo v Zheng",
+      "docket": "2026 NY Slip Op 04277",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04277.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04277.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "DeSilvo v Splen Constr., Inc.",
+      "docket": "2026 NY Slip Op 04278",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04278.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04278.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Doe v Clark",
+      "docket": "2026 NY Slip Op 04279",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04279.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04279.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Emmanuel v Tholl",
+      "docket": "2026 NY Slip Op 04280",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04280.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04280.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Frontario v White Plains Pub. Sch. Dist.",
+      "docket": "2026 NY Slip Op 04281",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04281.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04281.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Greenpoint Mtge. Funding, Inc. v Benyaminian",
+      "docket": "2026 NY Slip Op 04282",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04282.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04282.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Guliyev v Han",
+      "docket": "2026 NY Slip Op 04283",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04283.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04283.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Halloren v Halloren",
+      "docket": "2026 NY Slip Op 04284",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04284.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04284.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Hodges v Westchester County",
+      "docket": "2026 NY Slip Op 04285",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04285.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04285.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Intriago v 18th Highline Assoc., LLC",
+      "docket": "2026 NY Slip Op 04286",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04286.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04286.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Kolyer v Sallah",
+      "docket": "2026 NY Slip Op 04287",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04287.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04287.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "LF Collateral SPV IV, LLC v Citadel NY, Inc.",
+      "docket": "2026 NY Slip Op 04288",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04288.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04288.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Marin v Reyes",
+      "docket": "2026 NY Slip Op 04289",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04289.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04289.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of 563 Grand Med., P.C. v Country-Wide Ins. Co.",
+      "docket": "2026 NY Slip Op 04290",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04290.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04290.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of 563 Grand Med., P.C. v Country-Wide Ins. Co.",
+      "docket": "2026 NY Slip Op 04291",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04291.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04291.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of 563 Grand Med., P.C. v Country-Wide Ins. Co.",
+      "docket": "2026 NY Slip Op 04292",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04292.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04292.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of 563 Grand Med., P.C. v Country-Wide Ins. Co.",
+      "docket": "2026 NY Slip Op 04293",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04293.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04293.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of 647 Prospect, LLC v New York State Div. of Hous. &amp;amp; Community Renewal",
+      "docket": "2026 NY Slip Op 04294",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04294.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04294.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Acampora v Diaz",
+      "docket": "2026 NY Slip Op 04295",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04295.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04295.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Aron Law, PLLC v Town of Hempstead",
+      "docket": "2026 NY Slip Op 04296",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04296.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04296.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Nylaih B. (Raymond B.)",
+      "docket": "2026 NY Slip Op 04297",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04297.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04297.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Bautista v Joseph",
+      "docket": "2026 NY Slip Op 04298",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04298.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04298.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Bramble v Hudson",
+      "docket": "2026 NY Slip Op 04299",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04299.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04299.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Commissioner of Social Servs. v Mwalimu",
+      "docket": "2026 NY Slip Op 04300",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04300.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04300.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Fernandes v White",
+      "docket": "2026 NY Slip Op 04301",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04301.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04301.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Fredrickson",
+      "docket": "2026 NY Slip Op 04302",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04302.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04302.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Hereford Ins. Co. v Ramirez",
+      "docket": "2026 NY Slip Op 04303",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04303.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04303.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Hickey v Schroeder",
+      "docket": "2026 NY Slip Op 04304",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04304.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04304.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Jordan v White",
+      "docket": "2026 NY Slip Op 04305",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04305.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04305.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Daron M. (Creedmoor Psychiatric Ctr.)",
+      "docket": "2026 NY Slip Op 04306",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04306.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04306.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Olang v Keels",
+      "docket": "2026 NY Slip Op 04307",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04307.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04307.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Paez v Bambauer",
+      "docket": "2026 NY Slip Op 04308",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04308.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04308.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of QB Dev. Owner, LLC v Hensley",
+      "docket": "2026 NY Slip Op 04309",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04309.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04309.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Quilli v City of New York",
+      "docket": "2026 NY Slip Op 04310",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04310.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04310.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Ariana R. (Edwin R.)",
+      "docket": "2026 NY Slip Op 04311",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04311.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04311.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Santos v Matos",
+      "docket": "2026 NY Slip Op 04312",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04312.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04312.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Leon W. (Creedmoor Psychiatric Ctr.)",
+      "docket": "2026 NY Slip Op 04313",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04313.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04313.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Leon W. (Creedmoor Psychiatric Ctr.)",
+      "docket": "2026 NY Slip Op 04314",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04314.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04314.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Yin Z. (Hillside Hospital-Northwell Health)",
+      "docket": "2026 NY Slip Op 04315",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04315.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04315.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "One W. Bank FSB v Persaud",
+      "docket": "2026 NY Slip Op 04316",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04316.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04316.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Pentagon Fed. Credit Union v Lee",
+      "docket": "2026 NY Slip Op 04317",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04317.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04317.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Barrere",
+      "docket": "2026 NY Slip Op 04318",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04318.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04318.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Bennett",
+      "docket": "2026 NY Slip Op 04319",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04319.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04319.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Gerardray",
+      "docket": "2026 NY Slip Op 04320",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04320.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04320.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Glasgow",
+      "docket": "2026 NY Slip Op 04321",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04321.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04321.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Grant",
+      "docket": "2026 NY Slip Op 04322",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04322.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04322.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Jackson",
+      "docket": "2026 NY Slip Op 04323",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04323.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04323.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Love",
+      "docket": "2026 NY Slip Op 04324",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04324.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04324.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Matos",
+      "docket": "2026 NY Slip Op 04325",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04325.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04325.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Rovelo",
+      "docket": "2026 NY Slip Op 04326",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04326.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04326.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Stricklin",
+      "docket": "2026 NY Slip Op 04327",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04327.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04327.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Urbina",
+      "docket": "2026 NY Slip Op 04328",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04328.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04328.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Vargas",
+      "docket": "2026 NY Slip Op 04329",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04329.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04329.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Williams",
+      "docket": "2026 NY Slip Op 04330",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04330.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04330.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Ponce v Ortiz",
+      "docket": "2026 NY Slip Op 04331",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04331.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04331.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Presbytery of Long Is. v Central Presbyt. Church",
+      "docket": "2026 NY Slip Op 04332",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04332.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04332.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Ralph v Archdiocese of N.Y.",
+      "docket": "2026 NY Slip Op 04333",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04333.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04333.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Rivera v 293 Church Realty, LLC",
+      "docket": "2026 NY Slip Op 04334",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04334.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04334.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Rolka v Neelam Constr. Corp.",
+      "docket": "2026 NY Slip Op 04335",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04335.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04335.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Sawas v Elzanaty",
+      "docket": "2026 NY Slip Op 04336",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04336.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04336.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Shenzhen Qianhai Shengshi Lijin Inv. Enter. (Limited Partnership) v Xu",
+      "docket": "2026 NY Slip Op 04337",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04337.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04337.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Shenzhen Qianhai Shengshi Shengjin Inv. Enter. (Limited Partnership) v Xu",
+      "docket": "2026 NY Slip Op 04338",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04338.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04338.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Smith v Genting N.Y., LLC",
+      "docket": "2026 NY Slip Op 04339",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04339.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04339.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Suqilanda v Fresh Meadow Mech. Corp.",
+      "docket": "2026 NY Slip Op 04340",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04340.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04340.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Ye v Integon Natl. Ins. Co.",
+      "docket": "2026 NY Slip Op 04341",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-08",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04341.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04341.pdf",
+      "summary": ""
+    },
     {
       "case_name": "People ex rel. Melillo v Richards",
       "docket": "2026 NY Slip Op 04268",
