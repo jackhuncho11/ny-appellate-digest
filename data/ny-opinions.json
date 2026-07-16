@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-16T15:38:19.981Z",
+  "generatedAt": "2026-07-16T17:15:32.092Z",
   "minDate": "2026-02-20",
   "maxDate": "2026-07-16",
-  "count": 592,
+  "count": 596,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,42 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Canales v Noble Constr. Group, LLC",
+      "docket": "2026 NY Slip Op 04473",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-07-16",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04473.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04473.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Light &amp;amp; Wonder, Inc. v Mohawk Gaming Enters. LLC",
+      "docket": "2026 NY Slip Op 04474",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-07-16",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04474.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04474.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v White",
+      "docket": "2026 NY Slip Op 04475",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-07-16",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04475.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04475.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Sheard",
+      "docket": "2026 NY Slip Op 04476",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-07-16",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04476.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04476.pdf",
+      "summary": ""
+    },
     {
       "case_name": "People v Harris",
       "docket": "2026 NY Slip Op 04450",
