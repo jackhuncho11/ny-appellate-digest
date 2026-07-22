@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-22T10:24:53.003Z",
+  "generatedAt": "2026-07-22T13:52:43.698Z",
   "minDate": "2026-02-20",
-  "maxDate": "2026-07-16",
-  "count": 596,
+  "maxDate": "2026-07-21",
+  "count": 597,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "People ex rel. Ashton v Richards",
+      "docket": "2026 NY Slip Op 04477",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-21",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04477.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04477.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Canales v Noble Constr. Group, LLC",
       "docket": "2026 NY Slip Op 04473",
