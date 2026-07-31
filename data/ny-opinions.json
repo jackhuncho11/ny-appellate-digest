@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-31T17:28:50.654Z",
+  "generatedAt": "2026-07-31T19:23:56.453Z",
   "minDate": "2026-02-20",
-  "maxDate": "2026-07-30",
-  "count": 760,
+  "maxDate": "2026-07-31",
+  "count": 761,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "People ex rel. Raj v Richards",
+      "docket": "2026 NY Slip Op 04825",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-07-31",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04825.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04825.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Danielle W. v Li",
       "docket": "2026 NY Slip Op 04821",
