@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-08-08T03:26:24.078Z",
+  "generatedAt": "2026-08-08T04:56:07.759Z",
   "minDate": "2026-02-20",
   "maxDate": "2026-08-06",
   "count": 359,
   "succeededCourts": [
+    "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
     "NY App. Div. — 2nd Dept.",
     "NY App. Div. — 3rd Dept.",
@@ -11,12 +12,7 @@
     "NY App. Term — 1st Dept.",
     "NY App. Term — 2nd Dept."
   ],
-  "errors": [
-    {
-      "court": "New York Court of Appeals",
-      "error": "HTTP 522 from https://www.nycourts.gov/reporter/rss/COA.xml"
-    }
-  ],
+  "errors": [],
   "opinions": [
     {
       "case_name": "Batchilly v 610 8th Ave. Corp.",
