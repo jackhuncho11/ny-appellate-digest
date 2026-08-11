@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-11T19:01:25.604Z",
+  "generatedAt": "2026-08-11T20:42:07.071Z",
   "minDate": "2026-02-20",
-  "maxDate": "2026-08-06",
-  "count": 359,
+  "maxDate": "2026-08-11",
+  "count": 360,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "People ex rel. Nieves v Gaston",
+      "docket": "2026 NY Slip Op 04916",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-08-11",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04916.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04916.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Batchilly v 610 8th Ave. Corp.",
       "docket": "2026 NY Slip Op 04910",
