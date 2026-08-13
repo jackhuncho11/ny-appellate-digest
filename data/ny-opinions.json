@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-13T16:55:47.168Z",
+  "generatedAt": "2026-08-13T19:02:03.637Z",
   "minDate": "2026-02-20",
   "maxDate": "2026-08-13",
-  "count": 429,
+  "count": 435,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,60 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Matter of 382 8th Ave. Realty Corp. v NYS Div. of Hous. &amp;amp; Community Renewal",
+      "docket": "2026 NY Slip Op 04982",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04982.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04982.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Aras v B-U Realty Corp.",
+      "docket": "2026 NY Slip Op 04983",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04983.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04983.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Luo",
+      "docket": "2026 NY Slip Op 04984",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04984.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04984.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Brown",
+      "docket": "2026 NY Slip Op 04985",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04985.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04985.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Allen",
+      "docket": "2026 NY Slip Op 04986",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04986.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04986.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Rossi Mktg. Group, Inc. v Malin Group, Inc.",
+      "docket": "2026 NY Slip Op 04987",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04987.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04987.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Matter of O&amp;#39;Neill",
       "docket": "2026 NY Slip Op 04988",
