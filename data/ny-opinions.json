@@ -1,18 +1,25 @@
 {
-  "generatedAt": "2026-08-19T22:23:27.563Z",
+  "generatedAt": "2026-08-20T01:11:25.470Z",
   "minDate": "2026-02-20",
   "maxDate": "2026-08-19",
   "count": 500,
   "succeededCourts": [
-    "New York Court of Appeals",
-    "NY App. Div. — 1st Dept.",
     "NY App. Div. — 2nd Dept.",
     "NY App. Div. — 3rd Dept.",
     "NY App. Div. — 4th Dept.",
     "NY App. Term — 1st Dept.",
     "NY App. Term — 2nd Dept."
   ],
-  "errors": [],
+  "errors": [
+    {
+      "court": "New York Court of Appeals",
+      "error": "HTTP 404 from https://www.nycourts.gov/reporter/rss/COA.xml"
+    },
+    {
+      "court": "NY App. Div. — 1st Dept.",
+      "error": "HTTP 404 from https://www.nycourts.gov/reporter/rss/AD1st.xml"
+    }
+  ],
   "opinions": [
     {
       "case_name": "206 Rte. 59 Holdings, LLC v Boyiatzis Holdings Co., LLC",
@@ -600,6 +607,42 @@
       "summary": ""
     },
     {
+      "case_name": "Matter of O&amp;#39;Neill",
+      "docket": "2026 NY Slip Op 04988",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04988.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04988.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Summers",
+      "docket": "2026 NY Slip Op 04989",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04989.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04989.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Portuondo",
+      "docket": "2026 NY Slip Op 04990",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04990.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04990.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Solinsky",
+      "docket": "2026 NY Slip Op 04991",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-08-13",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04991.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04991.pdf",
+      "summary": ""
+    },
+    {
       "case_name": "Matter of 382 8th Ave. Realty Corp. v NYS Div. of Hous. &amp;amp; Community Renewal",
       "docket": "2026 NY Slip Op 04982",
       "court": "NY App. Div. — 1st Dept.",
@@ -651,42 +694,6 @@
       "date": "2026-08-13",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04987.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04987.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Matter of O&amp;#39;Neill",
-      "docket": "2026 NY Slip Op 04988",
-      "court": "NY App. Div. — 3rd Dept.",
-      "date": "2026-08-13",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04988.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04988.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Matter of Summers",
-      "docket": "2026 NY Slip Op 04989",
-      "court": "NY App. Div. — 3rd Dept.",
-      "date": "2026-08-13",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04989.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04989.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Matter of Portuondo",
-      "docket": "2026 NY Slip Op 04990",
-      "court": "NY App. Div. — 3rd Dept.",
-      "date": "2026-08-13",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04990.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04990.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Matter of Solinsky",
-      "docket": "2026 NY Slip Op 04991",
-      "court": "NY App. Div. — 3rd Dept.",
-      "date": "2026-08-13",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04991.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04991.pdf",
       "summary": ""
     },
     {
@@ -1284,60 +1291,6 @@
       "summary": ""
     },
     {
-      "case_name": "Batchilly v 610 8th Ave. Corp.",
-      "docket": "2026 NY Slip Op 04910",
-      "court": "NY App. Div. — 1st Dept.",
-      "date": "2026-08-06",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04910.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04910.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Johnson v Montefiore Med. Ctr.",
-      "docket": "2026 NY Slip Op 04911",
-      "court": "NY App. Div. — 1st Dept.",
-      "date": "2026-08-06",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04911.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04911.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Ordonez v USM Asset Trust Series -7",
-      "docket": "2026 NY Slip Op 04912",
-      "court": "NY App. Div. — 1st Dept.",
-      "date": "2026-08-06",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04912.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04912.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "People v Marcus T.",
-      "docket": "2026 NY Slip Op 04913",
-      "court": "NY App. Div. — 1st Dept.",
-      "date": "2026-08-06",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04913.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04913.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "People v Hernandez",
-      "docket": "2026 NY Slip Op 04914",
-      "court": "NY App. Div. — 1st Dept.",
-      "date": "2026-08-06",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04914.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04914.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Roth v Velasquez",
-      "docket": "2026 NY Slip Op 04915",
-      "court": "NY App. Div. — 1st Dept.",
-      "date": "2026-08-06",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04915.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04915.pdf",
-      "summary": ""
-    },
-    {
       "case_name": "Venezia v Luma",
       "docket": "2026 NY Slip Op 04897",
       "court": "NY App. Div. — 3rd Dept.",
@@ -1452,6 +1405,60 @@
       "date": "2026-08-06",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04909.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04909.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Batchilly v 610 8th Ave. Corp.",
+      "docket": "2026 NY Slip Op 04910",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-06",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04910.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04910.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Johnson v Montefiore Med. Ctr.",
+      "docket": "2026 NY Slip Op 04911",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-06",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04911.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04911.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Ordonez v USM Asset Trust Series -7",
+      "docket": "2026 NY Slip Op 04912",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-06",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04912.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04912.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Marcus T.",
+      "docket": "2026 NY Slip Op 04913",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-06",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04913.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04913.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Hernandez",
+      "docket": "2026 NY Slip Op 04914",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-06",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04914.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04914.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Roth v Velasquez",
+      "docket": "2026 NY Slip Op 04915",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-06",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04915.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04915.pdf",
       "summary": ""
     },
     {
