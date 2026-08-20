@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-20T14:35:19.568Z",
+  "generatedAt": "2026-08-20T16:33:56.666Z",
   "minDate": "2026-02-20",
-  "maxDate": "2026-08-19",
-  "count": 500,
+  "maxDate": "2026-08-20",
+  "count": 509,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,87 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Ambrose v City Univ. Constr. Fund",
+      "docket": "2026 NY Slip Op 05060",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05060.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05060.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of L.M. (H.M.)",
+      "docket": "2026 NY Slip Op 05061",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05061.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05061.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Simmons",
+      "docket": "2026 NY Slip Op 05062",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05062.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05062.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Tolliver",
+      "docket": "2026 NY Slip Op 05063",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05063.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05063.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Salas v 711-715 E 231st St., LLC",
+      "docket": "2026 NY Slip Op 05064",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05064.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05064.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Tobon v Turner Constr. Co.",
+      "docket": "2026 NY Slip Op 05065",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-08-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05065.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05065.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Sloan v Berger",
+      "docket": "2026 NY Slip Op 05057",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-08-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05057.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05057.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Kenney",
+      "docket": "2026 NY Slip Op 05058",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-08-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05058.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05058.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Kent",
+      "docket": "2026 NY Slip Op 05059",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-08-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05059.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05059.pdf",
+      "summary": ""
+    },
     {
       "case_name": "206 Rte. 59 Holdings, LLC v Boyiatzis Holdings Co., LLC",
       "docket": "2026 NY Slip Op 04997",
