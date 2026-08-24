@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-24T18:38:42.005Z",
+  "generatedAt": "2026-08-24T20:29:04.304Z",
   "minDate": "2026-06-04",
   "maxDate": "2026-08-20",
-  "count": 450,
+  "count": 463,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -1362,6 +1362,15 @@
       "date": "2026-08-11",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04916.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_04916.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "47-05 Ctr. SPE, LLC v Hack",
+      "docket": "2026 NY Slip Op 51314",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-08-07",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51314.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51314.pdf",
       "summary": ""
     },
     {
@@ -3687,6 +3696,42 @@
       "summary": ""
     },
     {
+      "case_name": "People v Gershen",
+      "docket": "2026 NY Slip Op 51313",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-07-23",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51313.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51313.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Johnson v Highlawn Moving &amp;amp; Stor., Inc.",
+      "docket": "2026 NY Slip Op 51310",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-26",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51310.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51310.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Merced v GEICO Ins. Agency, LLC",
+      "docket": "2026 NY Slip Op 51311",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-26",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51311.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51311.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "975 Wash. Prop., LLC v Sanchez",
+      "docket": "2026 NY Slip Op 51312",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-26",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51312.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51312.pdf",
+      "summary": ""
+    },
+    {
       "case_name": "People v Bravo",
       "docket": "2026 NY Slip Op 50976",
       "court": "NY App. Term — 1st Dept.",
@@ -3864,6 +3909,78 @@
       "date": "2026-06-17",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50941.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50941.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Saliba v MHANY Mgt.",
+      "docket": "2026 NY Slip Op 51302",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51302.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51302.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Mallek v Central Loan Admin. &amp;amp; Reporting (CENLAR)",
+      "docket": "2026 NY Slip Op 51303",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51303.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51303.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Di Marco v New York City Off. of Comptroller",
+      "docket": "2026 NY Slip Op 51304",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51304.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51304.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Jovanovic v Falsons Realty Corp.",
+      "docket": "2026 NY Slip Op 51305",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51305.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51305.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "New Image Chiropractic, P.C. v Kemper Ins. Co.",
+      "docket": "2026 NY Slip Op 51306",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51306.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51306.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Ezeoke v Udom",
+      "docket": "2026 NY Slip Op 51307",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51307.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51307.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Morgan v Caesar",
+      "docket": "2026 NY Slip Op 51308",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51308.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51308.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "One RX Chemist, Inc. v Nationwide Mut. Ins. Co.",
+      "docket": "2026 NY Slip Op 51309",
+      "court": "NY App. Term — 2nd Dept.",
+      "date": "2026-06-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51309.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51309.pdf",
       "summary": ""
     },
     {
