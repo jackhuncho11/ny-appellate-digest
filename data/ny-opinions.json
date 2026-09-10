@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-10T18:58:01.484Z",
+  "generatedAt": "2026-09-10T22:16:52.889Z",
   "minDate": "2026-06-04",
   "maxDate": "2026-09-10",
-  "count": 303,
+  "count": 314,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -75,6 +75,105 @@
       "date": "2026-09-10",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05242.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05242.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Jones",
+      "docket": "2026 NY Slip Op 05243",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05243.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05243.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Stanley",
+      "docket": "2026 NY Slip Op 05244",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05244.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05244.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Ameenah H. (Zenobia H.)",
+      "docket": "2026 NY Slip Op 05245",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05245.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05245.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Parkinson v Manhattan &amp;amp; Bronx Surface Tr. Operating Auth.",
+      "docket": "2026 NY Slip Op 05246",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05246.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05246.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Como",
+      "docket": "2026 NY Slip Op 05247",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05247.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05247.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Lento",
+      "docket": "2026 NY Slip Op 05249",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05249.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05249.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Attorneys in Violation of Judiciary Law &amp;#167; 468-a. (Kline)",
+      "docket": "2026 NY Slip Op 05250",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05250.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05250.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Attorneys in Violation of Judiciary Law &amp;#167; 468-a. (Liu)",
+      "docket": "2026 NY Slip Op 05251",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05251.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05251.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Attorneys in Violation of Judiciary Law &amp;#167; 468-a (Shencopp)",
+      "docket": "2026 NY Slip Op 05252",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05252.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05252.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Attorneys in Violation of Judiciary Law &amp;#167; 468-a (Waters)",
+      "docket": "2026 NY Slip Op 05253",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05253.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05253.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Spinelli",
+      "docket": "2026 NY Slip Op 05254",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05254.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05254.pdf",
       "summary": ""
     },
     {
