@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-10T14:04:57.978Z",
+  "generatedAt": "2026-09-10T18:58:01.484Z",
   "minDate": "2026-06-04",
-  "maxDate": "2026-09-03",
-  "count": 296,
+  "maxDate": "2026-09-10",
+  "count": 303,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,69 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Arch Ins. Co. v Selective Ins. Co. of Am.",
+      "docket": "2026 NY Slip Op 05236",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05236.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05236.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Gamma USA, Inc. v Pavarini McGovern, LLC",
+      "docket": "2026 NY Slip Op 05237",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05237.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05237.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Hoeben v FCA US LLC",
+      "docket": "2026 NY Slip Op 05238",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05238.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05238.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Bernstein",
+      "docket": "2026 NY Slip Op 05239",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05239.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05239.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Gershowitz",
+      "docket": "2026 NY Slip Op 05240",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05240.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05240.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Riley v Memorial Sloan-Kettering Cancer Ctr.",
+      "docket": "2026 NY Slip Op 05241",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05241.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05241.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v G.O.",
+      "docket": "2026 NY Slip Op 05242",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05242.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05242.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Matter of 57th &amp;amp; 6th Ground LLC v Carnegie House Tenants Corp.",
       "docket": "2026 NY Slip Op 05230",
