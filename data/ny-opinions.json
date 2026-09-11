@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-11T14:04:48.007Z",
+  "generatedAt": "2026-09-11T18:59:37.702Z",
   "minDate": "2026-06-04",
-  "maxDate": "2026-09-10",
-  "count": 315,
+  "maxDate": "2026-09-11",
+  "count": 300,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Matter of Ramos v Barravecchio",
+      "docket": "2026 NY Slip Op 05255",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-09-11",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05255.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05255.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Arch Ins. Co. v Selective Ins. Co. of Am.",
       "docket": "2026 NY Slip Op 05236",
@@ -183,6 +192,15 @@
       "date": "2026-09-10",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05254.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05254.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "361 E. 50th St. LLC v Lupo",
+      "docket": "2026 NY Slip Op 51411",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51411.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51411.pdf",
       "summary": ""
     },
     {
@@ -2508,78 +2526,6 @@
       "summary": ""
     },
     {
-      "case_name": "People v Bravo",
-      "docket": "2026 NY Slip Op 50976",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-25",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50976.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50976.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "People v Martinez",
-      "docket": "2026 NY Slip Op 50966",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-24",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50966.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50966.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "251 CPW Hous., LLC v Singer",
-      "docket": "2026 NY Slip Op 50967",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-24",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50967.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50967.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Bellstell 140 E. 56th St. LLC v Ferreira",
-      "docket": "2026 NY Slip Op 50968",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-24",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50968.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50968.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Four H Republic LLC v Bower",
-      "docket": "2026 NY Slip Op 50938",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-17",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50938.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50938.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "321-323-325 W. 42nd St. LLC v McMahan",
-      "docket": "2026 NY Slip Op 50939",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-17",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50939.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50939.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "100 Realty Equities LLC v Yifei Tian",
-      "docket": "2026 NY Slip Op 50940",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-17",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50940.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50940.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "New York Univ. v Munroe",
-      "docket": "2026 NY Slip Op 50941",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-17",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50941.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50941.pdf",
-      "summary": ""
-    },
-    {
       "case_name": "Saliba v MHANY Mgt.",
       "docket": "2026 NY Slip Op 51302",
       "court": "NY App. Term — 2nd Dept.",
@@ -2661,51 +2607,6 @@
       "summary": ""
     },
     {
-      "case_name": "924 W. End Ave., Inc. v Kaplan",
-      "docket": "2026 NY Slip Op 50923",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-15",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50923.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50923.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "GL Botanical, LLC v Crawford-Escala",
-      "docket": "2026 NY Slip Op 50924",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-15",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50924.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50924.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Schaier v Wee Care Child Care, LLC",
-      "docket": "2026 NY Slip Op 50925",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-15",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50925.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50925.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Almonte v Castillo",
-      "docket": "2026 NY Slip Op 50926",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-15",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50926.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50926.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "344 Bowery Retail LLC v Vazquez",
-      "docket": "2026 NY Slip Op 50927",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-15",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50927.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50927.pdf",
-      "summary": ""
-    },
-    {
       "case_name": "People v Harper",
       "docket": "2026 NY Slip Op 51293",
       "court": "NY App. Term — 2nd Dept.",
@@ -2775,42 +2676,6 @@
       "date": "2026-06-12",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51300.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51300.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "People v Guzman",
-      "docket": "2026 NY Slip Op 50873",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-09",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50873.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50873.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "People v Doumbia",
-      "docket": "2026 NY Slip Op 50874",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-09",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50874.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50874.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "People v Williams",
-      "docket": "2026 NY Slip Op 50875",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-09",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50875.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50875.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "People v Rizzo",
-      "docket": "2026 NY Slip Op 50876",
-      "court": "NY App. Term — 1st Dept.",
-      "date": "2026-06-09",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50876.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50876.pdf",
       "summary": ""
     },
     {
