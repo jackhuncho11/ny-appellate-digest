@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-11T08:37:18.184Z",
+  "generatedAt": "2026-09-11T14:04:48.007Z",
   "minDate": "2026-06-04",
   "maxDate": "2026-09-10",
-  "count": 314,
+  "count": 315,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -75,6 +75,15 @@
       "date": "2026-09-10",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05242.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05242.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Attorneys in Violation of Judiciary Law &amp;#167; 468-a",
+      "docket": "2026 NY Slip Op 05248",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05248.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05248.pdf",
       "summary": ""
     },
     {
