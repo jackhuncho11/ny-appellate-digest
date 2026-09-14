@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-14T16:10:28.945Z",
+  "generatedAt": "2026-09-14T21:33:39.456Z",
   "minDate": "2026-06-04",
-  "maxDate": "2026-09-11",
-  "count": 300,
+  "maxDate": "2026-09-14",
+  "count": 301,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Matter of Hansen v Suffolk County Bd. of Elections",
+      "docket": "2026 NY Slip Op 05256",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-09-14",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05256.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05256.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Matter of Ramos v Barravecchio",
       "docket": "2026 NY Slip Op 05255",
