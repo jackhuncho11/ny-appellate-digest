@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-16T10:55:14.313Z",
+  "generatedAt": "2026-09-16T16:14:29.326Z",
   "minDate": "2026-06-04",
-  "maxDate": "2026-09-14",
-  "count": 301,
+  "maxDate": "2026-09-15",
+  "count": 302,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Matter of Mitchell v NYC Bd. of Elections",
+      "docket": "2026 NY Slip Op 05257",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-09-15",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05257.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05257.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Matter of Hansen v Suffolk County Bd. of Elections",
       "docket": "2026 NY Slip Op 05256",
