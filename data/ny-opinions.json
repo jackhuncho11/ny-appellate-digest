@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-17T13:04:45.411Z",
+  "generatedAt": "2026-09-17T17:56:40.060Z",
   "minDate": "2026-06-04",
-  "maxDate": "2026-09-16",
-  "count": 398,
+  "maxDate": "2026-09-17",
+  "count": 412,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,141 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Matter of Mora",
+      "docket": "2026 NY Slip Op 05355",
+      "court": "New York Court of Appeals",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05355.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05355.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Application for a Search Warrant to Search the Premises Located at the Art Inst. of Chicago",
+      "docket": "2026 NY Slip Op 05363",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05363.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05363.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Beauchamp v New York City Tr. Auth.",
+      "docket": "2026 NY Slip Op 05364",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05364.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05364.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Broadway PT 1710 LLC v Kingdom Assoc. Inc.",
+      "docket": "2026 NY Slip Op 05365",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05365.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05365.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Delgado v Donald J. Trump for President, Inc.",
+      "docket": "2026 NY Slip Op 05366",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05366.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05366.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Hearns v Blended Family LLC",
+      "docket": "2026 NY Slip Op 05367",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05367.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05367.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Wells Fargo Bank v HBK Master Fund L.P.",
+      "docket": "2026 NY Slip Op 05368",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05368.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05368.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Reid v Gardner",
+      "docket": "2026 NY Slip Op 05356",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05356.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05356.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Rosario v William Carter Co.",
+      "docket": "2026 NY Slip Op 05357",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05357.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05357.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Alexander v New York City Dept. of Homeless Servs.",
+      "docket": "2026 NY Slip Op 05358",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05358.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05358.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Schachter (Commissioner of Labor)",
+      "docket": "2026 NY Slip Op 05359",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05359.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05359.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Lorenz v DiNapoli",
+      "docket": "2026 NY Slip Op 05360",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05360.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05360.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Gellene",
+      "docket": "2026 NY Slip Op 05361",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05361.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05361.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Stein",
+      "docket": "2026 NY Slip Op 05362",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-09-17",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05362.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05362.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People ex rel. Elman v Richards",
+      "docket": "2026 NY Slip Op 05354",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-09-16",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05354.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05354.pdf",
+      "summary": ""
+    },
     {
       "case_name": "90 Chicken Corp. v 90 Jericho Realty Corp.",
       "docket": "2026 NY Slip Op 05258",
@@ -1839,15 +1974,6 @@
       "date": "2026-09-02",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05215.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05215.pdf",
-      "summary": ""
-    },
-    {
-      "case_name": "Matter of Kasper",
-      "docket": "2026 NY Slip Op 05142",
-      "court": "New York Court of Appeals",
-      "date": "2026-08-27",
-      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05142.shtml",
-      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05142.pdf",
       "summary": ""
     },
     {
