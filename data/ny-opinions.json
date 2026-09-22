@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-22T13:08:10.418Z",
+  "generatedAt": "2026-09-22T17:57:37.501Z",
   "minDate": "2026-06-04",
-  "maxDate": "2026-09-17",
-  "count": 412,
+  "maxDate": "2026-09-22",
+  "count": 419,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,69 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Aurelius Capital Master Ltd. v Hertz Intl. Ltd.",
+      "docket": "2026 NY Slip Op 05369",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05369.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05369.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Berardi v 900 Third Ave., L.P.",
+      "docket": "2026 NY Slip Op 05370",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05370.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05370.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "I.M. v City of New York",
+      "docket": "2026 NY Slip Op 05371",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05371.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05371.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Juarez v Avacon Mgt. LLC",
+      "docket": "2026 NY Slip Op 05372",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05372.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05372.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Martinez v 56th Realty LLC",
+      "docket": "2026 NY Slip Op 05373",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05373.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05373.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Veliu v Verizon N.Y. Inc.",
+      "docket": "2026 NY Slip Op 05374",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05374.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05374.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People ex rel. Scaggs v Spano",
+      "docket": "2026 NY Slip Op 05375",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05375.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05375.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Matter of Mora",
       "docket": "2026 NY Slip Op 05355",
