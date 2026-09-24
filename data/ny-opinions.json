@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-24T19:48:45.206Z",
+  "generatedAt": "2026-09-24T23:01:38.793Z",
   "minDate": "2026-06-04",
   "maxDate": "2026-09-24",
-  "count": 504,
+  "count": 511,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -840,6 +840,69 @@
       "date": "2026-09-22",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05375.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05375.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Brown",
+      "docket": "2026 NY Slip Op 51522",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51522.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51522.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v McCummings",
+      "docket": "2026 NY Slip Op 51523",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51523.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51523.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Rodriguez",
+      "docket": "2026 NY Slip Op 51524",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51524.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51524.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Port Auth. of NY &amp;amp; N.J. v Fleming",
+      "docket": "2026 NY Slip Op 51525",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51525.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51525.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Port Auth. of NY &amp;amp; N.J. v Lois",
+      "docket": "2026 NY Slip Op 51526",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51526.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51526.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "RVA Leasing Corp. v Nationwide Mut. Ins. Co.",
+      "docket": "2026 NY Slip Op 51527",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51527.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51527.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "RVA Leasing Corp. v Nationwide Mut. Ins. Co.",
+      "docket": "2026 NY Slip Op 51528",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-22",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51528.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51528.pdf",
       "summary": ""
     },
     {
