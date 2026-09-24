@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-24T09:01:43.257Z",
+  "generatedAt": "2026-09-24T14:38:50.983Z",
   "minDate": "2026-06-04",
-  "maxDate": "2026-09-23",
-  "count": 483,
+  "maxDate": "2026-09-24",
+  "count": 484,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "People v Greene",
+      "docket": "2026 NY Slip Op 05440",
+      "court": "New York Court of Appeals",
+      "date": "2026-09-24",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05440.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05440.pdf",
+      "summary": ""
+    },
     {
       "case_name": "1539 Realty, LLC v Murphy",
       "docket": "2026 NY Slip Op 05376",
