@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-25T15:00:43.988Z",
+  "generatedAt": "2026-09-25T19:51:09.188Z",
   "minDate": "2026-06-04",
-  "maxDate": "2026-09-24",
-  "count": 511,
+  "maxDate": "2026-09-25",
+  "count": 518,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "People ex rel. Harnick v Spano",
+      "docket": "2026 NY Slip Op 05461",
+      "court": "NY App. Div. — 2nd Dept.",
+      "date": "2026-09-25",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05461.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05461.pdf",
+      "summary": ""
+    },
     {
       "case_name": "People v Greene",
       "docket": "2026 NY Slip Op 05440",
@@ -201,6 +210,60 @@
       "date": "2026-09-24",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05455.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_05455.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Snyder v Sivic Realty Corp.",
+      "docket": "2026 NY Slip Op 51529",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-24",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51529.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51529.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Burns-Tetteh v Goldfarb Props.-Pelican Mgt., Inc.",
+      "docket": "2026 NY Slip Op 51530",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-24",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51530.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51530.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Lopez v Metro By T-Mobile",
+      "docket": "2026 NY Slip Op 51531",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-24",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51531.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51531.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Springer v Aminov Jewelers",
+      "docket": "2026 NY Slip Op 51532",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-24",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51532.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51532.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Oparaji v Turkish Airlines, Inc.",
+      "docket": "2026 NY Slip Op 51533",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-24",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51533.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51533.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "85 E. End Owner, LLC v Ferraro",
+      "docket": "2026 NY Slip Op 51534",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-09-24",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51534.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51534.pdf",
       "summary": ""
     },
     {
