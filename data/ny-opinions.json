@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-16T14:33:47.711Z",
+  "generatedAt": "2026-10-16T19:20:45.583Z",
   "minDate": "2026-08-20",
   "maxDate": "2026-10-15",
-  "count": 525,
+  "count": 530,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -561,6 +561,51 @@
       "date": "2026-10-15",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06057.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06057.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Santos",
+      "docket": "2026 NY Slip Op 51712",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-15",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51712.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51712.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Obah v Google Roblox &amp;amp; Roblox",
+      "docket": "2026 NY Slip Op 51713",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-15",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51713.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51713.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Zigelstein v Shuping Tong",
+      "docket": "2026 NY Slip Op 51714",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-15",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51714.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51714.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "65 FW Owner LLC v Espinal",
+      "docket": "2026 NY Slip Op 51715",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-15",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51715.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51715.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "SM I MMS, LLC v Fearless Music TV, LLC",
+      "docket": "2026 NY Slip Op 51716",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-15",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51716.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51716.pdf",
       "summary": ""
     },
     {
