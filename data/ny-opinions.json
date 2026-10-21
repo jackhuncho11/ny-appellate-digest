@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-21T14:52:37.544Z",
+  "generatedAt": "2026-10-21T19:55:47.800Z",
   "minDate": "2026-08-20",
   "maxDate": "2026-10-20",
-  "count": 553,
+  "count": 558,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -219,6 +219,51 @@
       "date": "2026-10-20",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06080.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06080.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "East Harlem MEC Parcel C, L.P. v Smalls",
+      "docket": "2026 NY Slip Op 51743",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51743.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51743.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Caban v Oscar&amp;#39;s Gold &amp;amp; Diamonds",
+      "docket": "2026 NY Slip Op 51744",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51744.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51744.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "525 W. 52 Prop. Owner v Tsokanos",
+      "docket": "2026 NY Slip Op 51745",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51745.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51745.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "3890-98 Broadway Assoc. LLC v Hiraldo",
+      "docket": "2026 NY Slip Op 51746",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51746.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51746.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Lafayette Nelson Apts., LLC v Perez",
+      "docket": "2026 NY Slip Op 51747",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51747.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51747.pdf",
       "summary": ""
     },
     {
