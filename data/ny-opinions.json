@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-28T14:57:25.774Z",
+  "generatedAt": "2026-10-28T20:47:37.615Z",
   "minDate": "2026-08-20",
-  "maxDate": "2026-10-27",
-  "count": 748,
+  "maxDate": "2026-10-28",
+  "count": 752,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,15 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Matter of Williams v New York State Bd. of Elections",
+      "docket": "2026 NY Slip Op 06271",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-10-28",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06271.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06271.pdf",
+      "summary": ""
+    },
     {
       "case_name": "People v Salina B.",
       "docket": "2026 NY Slip Op 06235",
@@ -336,6 +345,33 @@
       "date": "2026-10-27",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06270.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06270.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "207-209 W. 107th St., LLC v De La Cruz",
+      "docket": "2026 NY Slip Op 26192",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-27",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_26192.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_26192.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "227-231 E 59th Partners LLC v Leoni",
+      "docket": "2026 NY Slip Op 51798",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-27",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51798.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51798.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Ormonde Equities, LLC v Workplayce 2030 Broadway, LLC",
+      "docket": "2026 NY Slip Op 51799",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-10-27",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51799.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51799.pdf",
       "summary": ""
     },
     {
