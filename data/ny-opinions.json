@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-29T08:04:58.094Z",
+  "generatedAt": "2026-10-29T16:37:55.160Z",
   "minDate": "2026-08-20",
-  "maxDate": "2026-10-28",
-  "count": 832,
+  "maxDate": "2026-10-29",
+  "count": 860,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,258 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "People v Ekukpe",
+      "docket": "2026 NY Slip Op 06378",
+      "court": "New York Court of Appeals",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06378.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06378.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Nantan",
+      "docket": "2026 NY Slip Op 06379",
+      "court": "New York Court of Appeals",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06379.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06379.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Camp-Potter",
+      "docket": "2026 NY Slip Op 06352",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06352.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06352.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Gilyard",
+      "docket": "2026 NY Slip Op 06353",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06353.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06353.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Hassett",
+      "docket": "2026 NY Slip Op 06354",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06354.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06354.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Hampton",
+      "docket": "2026 NY Slip Op 06355",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06355.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06355.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Smith",
+      "docket": "2026 NY Slip Op 06356",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06356.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06356.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Perry",
+      "docket": "2026 NY Slip Op 06357",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06357.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06357.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Franklin",
+      "docket": "2026 NY Slip Op 06358",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06358.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06358.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Bradford",
+      "docket": "2026 NY Slip Op 06359",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06359.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06359.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Hart",
+      "docket": "2026 NY Slip Op 06360",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06360.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06360.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Albert D.",
+      "docket": "2026 NY Slip Op 06361",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06361.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06361.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Nin v Rosado",
+      "docket": "2026 NY Slip Op 06362",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06362.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06362.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Jeffrey O. v Casey Q.",
+      "docket": "2026 NY Slip Op 06363",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06363.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06363.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Cannabis Impact Prevention Coalition, LLC v New York State Cannabis Control Bd.",
+      "docket": "2026 NY Slip Op 06364",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06364.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06364.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Maisto v State of New York",
+      "docket": "2026 NY Slip Op 06365",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06365.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06365.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Seneca Ins. Co. Inc. v Cobleskill Enter., LLP",
+      "docket": "2026 NY Slip Op 06366",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06366.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06366.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Seneca Lake Guardian, Inc. v Seneca Meadows, Inc.",
+      "docket": "2026 NY Slip Op 06367",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06367.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06367.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Andrew II. v Gail JJ.",
+      "docket": "2026 NY Slip Op 06368",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06368.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06368.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of McDonell v CJ Banach Inc.",
+      "docket": "2026 NY Slip Op 06369",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06369.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06369.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Bruck v Town of Rochester Planning Bd.",
+      "docket": "2026 NY Slip Op 06370",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06370.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06370.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Wilmington Sav. Fund Socy., FSB v Laurino",
+      "docket": "2026 NY Slip Op 06371",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06371.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06371.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of McCutcheon",
+      "docket": "2026 NY Slip Op 06372",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06372.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06372.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Palmer",
+      "docket": "2026 NY Slip Op 06373",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06373.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06373.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Tingwei",
+      "docket": "2026 NY Slip Op 06374",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06374.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06374.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Tobin",
+      "docket": "2026 NY Slip Op 06375",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06375.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06375.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Treseder",
+      "docket": "2026 NY Slip Op 06376",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06376.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06376.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of Wilhelm",
+      "docket": "2026 NY Slip Op 06377",
+      "court": "NY App. Div. — 3rd Dept.",
+      "date": "2026-10-29",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06377.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06377.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Matter of Williams v New York State Bd. of Elections",
       "docket": "2026 NY Slip Op 06271",
