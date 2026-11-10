@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-10T16:07:30.076Z",
+  "generatedAt": "2026-11-10T22:53:20.060Z",
   "minDate": "2026-08-20",
-  "maxDate": "2026-11-05",
-  "count": 330,
+  "maxDate": "2026-11-10",
+  "count": 350,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,186 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Matter of Anonymous v Trustees of Columbia Univ. in the City of N.Y.",
+      "docket": "2026 NY Slip Op 06549",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06549.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06549.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Deshmukh v Kasowitz Benson Torres LLP",
+      "docket": "2026 NY Slip Op 06550",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06550.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06550.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Fata v Duncan",
+      "docket": "2026 NY Slip Op 06551",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06551.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06551.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Jesus M. Zeno, P.C. v Grullon",
+      "docket": "2026 NY Slip Op 06552",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06552.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06552.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Logrono v City of New York",
+      "docket": "2026 NY Slip Op 06553",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06553.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06553.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of A.M. (N.L.)",
+      "docket": "2026 NY Slip Op 06554",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06554.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06554.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Morton v Abihssira",
+      "docket": "2026 NY Slip Op 06555",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06555.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06555.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Canady",
+      "docket": "2026 NY Slip Op 06556",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06556.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06556.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Rivera",
+      "docket": "2026 NY Slip Op 06557",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06557.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06557.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Wilson",
+      "docket": "2026 NY Slip Op 06558",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06558.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06558.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Francois",
+      "docket": "2026 NY Slip Op 06559",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06559.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06559.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Campbell",
+      "docket": "2026 NY Slip Op 06560",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06560.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06560.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of People v Maginley-Liddie",
+      "docket": "2026 NY Slip Op 06561",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06561.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06561.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Reyes v Hoffman St. Dev. LLC",
+      "docket": "2026 NY Slip Op 06562",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06562.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06562.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Stone Sec. Serv. &amp;amp; Investigations Inc. v Panoramic Sec. &amp;amp; Consulting Servs., LLC",
+      "docket": "2026 NY Slip Op 06563",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06563.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06563.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Hai Po Sun v Jung Hoon Son",
+      "docket": "2026 NY Slip Op 06564",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06564.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06564.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Tacora Nantucket Fin. LLC v Nantucket Capital Corp.",
+      "docket": "2026 NY Slip Op 06565",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06565.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06565.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Then v Meridian Realty Inc.",
+      "docket": "2026 NY Slip Op 06566",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06566.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06566.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Ukekweh v City of New York",
+      "docket": "2026 NY Slip Op 06567",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06567.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06567.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Walsh v Singho",
+      "docket": "2026 NY Slip Op 06568",
+      "court": "NY App. Div. — 1st Dept.",
+      "date": "2026-11-10",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06568.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06568.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Ahmed v Choudhry",
       "docket": "2026 NY Slip Op 06518",
