@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-18T09:46:49.928Z",
+  "generatedAt": "2026-11-18T18:39:48.365Z",
   "minDate": "2026-08-20",
   "maxDate": "2026-11-17",
-  "count": 432,
+  "count": 437,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -327,6 +327,42 @@
       "date": "2026-11-17",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06795.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06795.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Ortiz",
+      "docket": "2026 NY Slip Op 51924",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-11-16",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51924.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51924.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "86 W. Holdings LLC v Singh",
+      "docket": "2026 NY Slip Op 51926",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-11-16",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51926.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51926.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "S &amp;amp; P Assoc. of NY, LLC v Dewald",
+      "docket": "2026 NY Slip Op 51927",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-11-16",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51927.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51927.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "304-306 W. 133rd St. Holding v Consolidated Edison Co. of NY, Inc.",
+      "docket": "2026 NY Slip Op 51928",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-11-16",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51928.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51928.pdf",
       "summary": ""
     },
     {
@@ -2055,6 +2091,15 @@
       "date": "2026-11-12",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06611.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06611.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Joseph",
+      "docket": "2026 NY Slip Op 51925",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-11-12",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51925.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51925.pdf",
       "summary": ""
     },
     {
