@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-23T14:03:39.487Z",
+  "generatedAt": "2026-11-24T02:45:13.053Z",
   "minDate": "2026-08-20",
-  "maxDate": "2026-11-20",
-  "count": 561,
+  "maxDate": "2026-11-23",
+  "count": 570,
   "succeededCourts": [
     "New York Court of Appeals",
     "NY App. Div. — 1st Dept.",
@@ -14,6 +14,60 @@
   ],
   "errors": [],
   "opinions": [
+    {
+      "case_name": "Patterson v Meta Platforms, Inc.",
+      "docket": "2026 NY Slip Op 06927",
+      "court": "New York Court of Appeals",
+      "date": "2026-11-23",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06927.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06927.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Brown v Z-Live Inc.",
+      "docket": "2026 NY Slip Op 06928",
+      "court": "New York Court of Appeals",
+      "date": "2026-11-23",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06928.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06928.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Martin",
+      "docket": "2026 NY Slip Op 06929",
+      "court": "New York Court of Appeals",
+      "date": "2026-11-23",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06929.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06929.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Cheristin",
+      "docket": "2026 NY Slip Op 06930",
+      "court": "New York Court of Appeals",
+      "date": "2026-11-23",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06930.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06930.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Hannah T.",
+      "docket": "2026 NY Slip Op 06931",
+      "court": "New York Court of Appeals",
+      "date": "2026-11-23",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06931.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06931.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Matter of People v Commons W., LLC",
+      "docket": "2026 NY Slip Op 06932",
+      "court": "New York Court of Appeals",
+      "date": "2026-11-23",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06932.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06932.pdf",
+      "summary": ""
+    },
     {
       "case_name": "Matter of Target Corp. v County of Monroe Indus. Dev. Agency",
       "docket": "2026 NY Slip Op 06899",
@@ -264,6 +318,33 @@
       "date": "2026-11-20",
       "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06926.shtml",
       "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_06926.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "People v Shirley",
+      "docket": "2026 NY Slip Op 26221",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-11-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_26221.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_26221.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Lovett v Legal Aid Socy.",
+      "docket": "2026 NY Slip Op 26222",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-11-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_26222.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_26222.pdf",
+      "summary": ""
+    },
+    {
+      "case_name": "Hellier v Contessa",
+      "docket": "2026 NY Slip Op 51956",
+      "court": "NY App. Term — 1st Dept.",
+      "date": "2026-11-20",
+      "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51956.shtml",
+      "pdf_url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51956.pdf",
       "summary": ""
     },
     {
